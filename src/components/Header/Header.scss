@@ -1,0 +1,62 @@
+@import "../../common/baseColors.scss";
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(32, 35, 38, 0.53);
+  padding: 1rem;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 1; /* Change opacity to 1 */
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  transition: background-color 0.3s ease;
+
+
+  &:hover {
+    background-color: rgba(1, 9, 33, 0.56);
+    animation: shine 1s linear infinite;
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: -200%;
+    }
+    100% {
+      background-position: 200%;
+    }
+  }
+}
+
+.header.visible {
+  transform: translateY(0);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+
+}
+
+.logo {
+  color: $font-primary;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.userImage,
+.userImage img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}

@@ -1,0 +1,40 @@
+.movie-card {
+  width: calc(20% - 1rem); /* Adjust the width as needed */
+  margin-bottom: 2rem;
+  background-color: #222;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  padding: 16px;
+
+  justify-content: center;
+  align-items: center;
+
+  transition: transform 0.3s ease;
+  transform-origin: center bottom;
+
+  &:hover {
+
+    transform: scale(1.05);
+  }
+
+
+
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  p {
+    margin-bottom: 4px;
+  }
+
+  .movie-poster {
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 12px;
+
+
+  }
+}
