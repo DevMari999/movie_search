@@ -9,7 +9,7 @@ import Home from "./components/Home/Home";
 
 import './App.scss';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
 
