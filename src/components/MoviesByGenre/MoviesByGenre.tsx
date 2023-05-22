@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleTheme } from '../../redux/slices/themeSlice';
 import { fetchMoviesByGenre, FetchMoviesByGenrePayload } from "../../redux/slices";
 import { RootState, AppDispatch } from '../../redux';
 import { Movie } from '../../types';
