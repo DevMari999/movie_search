@@ -1,19 +1,21 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {fetchMoviesByGenre, FetchMoviesByGenrePayload} from "../../redux/slices";
+import { toggleTheme } from '../../redux/slices/themeSlice';
+import { fetchMoviesByGenre, FetchMoviesByGenrePayload } from "../../redux/slices";
 import { RootState, AppDispatch } from '../../redux';
 import { Movie } from '../../types';
 import { useParams } from 'react-router-dom';
 import { MovieCard } from '../../components';
 import './MoviesByGenre.css';
 
-const MoviesByGenre: React.FC= () => {
+const MoviesByGenre: React.FC = () => {
     const dispatch = useDispatch<AppDispatch>();
     const { genreId } = useParams<{ genreId?: string }>();
 
     const movies = useSelector((state: RootState) => state.movies.data);
     const currentPage = useSelector((state: RootState) => state.movies.currentPage);
     const totalPages = useSelector((state: RootState) => state.movies.totalPages);
+    const isLightTheme = useSelector((state: RootState) => state.theme.isLightTheme);
 
     useEffect(() => {
         if (genreId) {
@@ -35,12 +37,13 @@ const MoviesByGenre: React.FC= () => {
         }
     };
 
+
     if (genreId === undefined || movies.length === 0) {
         return <div>Loading...</div>;
     }
 
     return (
-        <div className='movieByGenre'>
+        <div className={`movieByGenre ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
             {movies.map((movie: Movie) => (
                 <MovieCard key={movie.id} movie={movie} />
             ))}
@@ -53,11 +56,13 @@ const MoviesByGenre: React.FC= () => {
                     Next
                 </button>
             </div>
+
         </div>
     );
 };
 
 export default MoviesByGenre;
+
 
 
 

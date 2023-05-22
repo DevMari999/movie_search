@@ -1,14 +1,16 @@
-import "./Footer.css";
-import React from "react";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../redux';
+import './Footer.css';
 
 const Footer: React.FC = () => {
-    return (
+    const isLightTheme = useSelector((state: RootState) => state.theme.isLightTheme);
 
-        <div className="footer">
+    return (
+        <div className={`footer ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
             <div>Tetflix</div>
             <div>©2023 by tetflix.com, Inc.</div>
         </div>
-
     );
 };
 

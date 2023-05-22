@@ -49,6 +49,10 @@
   margin-right: 20px;
 }
 
+.movie-listing.light-theme {
+  background-color: rgba(205, 203, 197, 0.82);
+}
+
 .movie-listing h2 {
   font-size: 18px;
   margin-bottom: 8px;
@@ -67,7 +71,10 @@
   width: 100%;
 }
 
-.movie-listing .pagination .pagination-button {
+
+
+
+.movie-listing.dark-theme .pagination .pagination-button {
   display: inline-block;
   padding: 10px 20px;
   background-color: rgba(128, 6, 6, 0.84);
@@ -81,7 +88,7 @@
   margin: 10px;
 }
 
-.movie-listing .pagination .pagination-button::before {
+.movie-listing.dark-theme .pagination .pagination-button::before {
   content: '';
   position: absolute;
   top: 0;
@@ -94,10 +101,46 @@
   z-index: -1;
 }
 
-.movie-listing .pagination .pagination-button:hover::before {
+.movie-listing.dark-theme .pagination .pagination-button:hover::before {
   left: 100%;
 }
 
-.movie-listing .pagination .pagination-button:hover {
+.movie-listing.dark-theme .pagination .pagination-button:hover {
+  transform: scale(1.05);
+}
+
+/* Light Theme */
+.movie-listing.light-theme .pagination .pagination-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(219, 74, 74, 0.91);
+  color: #d7e6f4;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.movie-listing.light-theme .pagination .pagination-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: skewX(-30deg);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: -1;
+}
+
+.movie-listing.light-theme .pagination .pagination-button:hover::before {
+  left: 100%;
+}
+
+.movie-listing.light-theme .pagination .pagination-button:hover {
   transform: scale(1.05);
 }

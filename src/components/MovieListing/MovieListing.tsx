@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux';
-import { setMovies, setCurrentPage} from "../../redux/slices";
-import {api} from '../../services';
-import {MovieCard} from '../../components';
-
+import { setMovies, setCurrentPage } from '../../redux/slices';
+import { api } from '../../services';
+import { MovieCard } from '../../components';
 import './MovieListing.css';
 
 const MovieListing: React.FC = () => {
     const dispatch = useDispatch();
     const { movies, currentPage } = useSelector((state: RootState) => state.movieListing);
+    const isLightTheme = useSelector((state: RootState) => state.theme.isLightTheme);
 
     useEffect(() => {
         const fetchMovies = async () => {
@@ -36,7 +36,7 @@ const MovieListing: React.FC = () => {
     };
 
     return (
-        <div className="movie-listing">
+        <div className={`movie-listing ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
             {movies.map((movie) => (
                 <MovieCard key={movie.id} movie={movie} />
             ))}

@@ -2,13 +2,14 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { setHeaderVisibility } from '../../redux/slices';
-import { RootState} from '../../redux';
+import { RootState } from '../../redux';
 import './Header.css';
-import {UserInfo} from '../../components';
-
+import { UserInfo } from '../../components';
+import { toggleTheme } from '../../redux/slices/themeSlice';
 
 const Header: React.FC = () => {
     const isHeaderVisible = useSelector((state: RootState) => state.header.isVisible);
+    const isLightTheme = useSelector((state: RootState) => state.theme.isLightTheme);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -37,18 +38,26 @@ const Header: React.FC = () => {
         };
     }, [dispatch]);
 
+    const handleThemeToggle = () => {
+        dispatch(toggleTheme());
+    };
+
     return (
-        <header className={`header ${isHeaderVisible ? 'visible' : ''}`}>
+        <header className={`header ${isHeaderVisible ? 'visible' : ''} ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
             <Link to="/">
                 <div className="logo">HOME</div>
             </Link>
             <Link to="/movie-listing">
                 <button className="showAllMovies">Show All Movies</button>
             </Link>
+            <button className={`themeToggle ${isLightTheme ? 'light-theme' : 'dark-theme'}`} onClick={handleThemeToggle}>
+                {isLightTheme ? '🌙' : '☀️'}
+            </button>
 
-            <UserInfo/>
+            <UserInfo />
         </header>
     );
 };
 
 export default Header;
+

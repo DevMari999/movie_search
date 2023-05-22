@@ -7,9 +7,9 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import './SearchResults.css';
 
-
 const SearchResults: React.FC = () => {
     const searchResults = useSelector((state: RootState) => state.home.searchResults);
+    const isLightTheme = useSelector((state: RootState) => state.theme.isLightTheme);
 
     const settings = {
         dots: false,
@@ -19,12 +19,13 @@ const SearchResults: React.FC = () => {
         slidesToScroll: 3,
     };
 
+    const sliderClassName = `slider ${isLightTheme ? 'light-theme' : 'dark-theme'}`;
+
     return (
-        <div className="search-results">
-            <Slider {...settings}>
+        <div className={`search-results ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
+            <Slider {...settings} className={sliderClassName}>
                 {searchResults.map((movie: any) => (
                     <div className="resultsDiv" key={movie.id}>
-                        {movie.title}
                         <img
                             className="movie-poster2"
                             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -38,3 +39,4 @@ const SearchResults: React.FC = () => {
 };
 
 export default SearchResults;
+

@@ -26,6 +26,7 @@
     }
 }
 
+
 .movieByGenre {
     display: flex;
     flex-wrap: wrap;
@@ -34,9 +35,10 @@
     margin-top: 100px;
     margin-left: 20px;
     margin-right: 20px;
+
 }
 
-.pagination {
+.movieByGenre .pagination {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,11 +47,9 @@
     width: 100%;
 }
 
-.pagination .pagination-button {
+.movieByGenre .pagination .pagination-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: rgba(128, 6, 6, 0.84);
-    color: #d7e6f4;
     border-radius: 4px;
     font-size: 18px;
     cursor: pointer;
@@ -59,23 +59,46 @@
     margin: 10px;
 }
 
-.pagination .pagination-button::before {
+.movieByGenre .pagination .pagination-button::before {
     content: '';
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.3);
     transform: skewX(-30deg);
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     z-index: -1;
 }
 
-.pagination .pagination-button:hover::before {
+.movieByGenre .pagination .pagination-button:hover::before {
     left: 100%;
 }
 
-.pagination .pagination-button:hover {
+.movieByGenre .pagination .pagination-button:hover {
     transform: scale(1.05);
+}
+
+
+.movieByGenre.dark-theme .pagination .pagination-button {
+    background-color: rgba(128, 6, 6, 0.84);
+    color: #d7e6f4;
+}
+
+.movieByGenre.dark-theme .pagination .pagination-button::before {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+.movieByGenre.light-theme .pagination .pagination-button {
+    background-color: rgba(219, 74, 74, 0.91);
+    color: #d7e6f4;
+}
+
+.movieByGenre.light-theme .pagination .pagination-button::before {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.movieByGenre.light-theme {
+    background-color: rgba(205, 203, 197, 0.82);
 }

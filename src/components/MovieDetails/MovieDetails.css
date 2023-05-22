@@ -1,15 +1,13 @@
 .movie-details {
-  background-image: url(../../images/details.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-color: #111;
-  color: #fff;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 20px;
+  background-image: url(../../images/details.jpg);
 }
 
 .movie-details-content {
@@ -19,10 +17,8 @@
 }
 
 .movie-details .poster-container {
-
-
-  margin-right: 150px;;
-  box-shadow:  0px 0px 25px rgba(255, 0, 0, 0.5);
+  margin-right: 150px;
+  box-shadow: 0px 0px 25px rgba(255, 0, 0, 0.5);
   width: fit-content;
 }
 
@@ -36,24 +32,22 @@
   border: 2px solid rgba(42, 3, 3, 0.76);
   padding: 10px;
   box-shadow: 0px 0px 25px rgba(255, 0, 0, 0.5);
-  background-color: rgba(57, 4, 4, 0.98);
 }
 
 .movie-details h1 {
   font-size: 36px;
   margin-bottom: 10px;
-
 }
 
 .movie-details p {
   font-size: 28px;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .genre-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: rgba(128, 6, 6, 0.84);
   color: #d7e6f4;
   border-radius: 4px;
   font-size: 18px;
@@ -62,5 +56,35 @@
   overflow: hidden;
   font-weight: bold;
   margin: 10px;
+}
 
+
+.movie-details.dark-theme {
+  background-color: #111;
+  color: #fff;
+
+}
+
+.movie-details.dark-theme .description {
+  background-color: rgba(57, 4, 4, 0.98);
+}
+
+.movie-details.dark-theme .genre-button {
+  background-color: rgba(128, 6, 6, 0.84);
+}
+
+
+.movie-details.light-theme {
+  background-color: rgba(205, 203, 197, 0.82);
+  color: rgba(17, 17, 17, 0.88);
+
+}
+
+.movie-details.light-theme .description {
+  background-color: rgba(205, 203, 197, 0.82);
+}
+
+.movie-details.light-theme .genre-button {
+  background-color: rgba(219, 74, 74, 0.91);
+  color: #d7e6f4;
 }

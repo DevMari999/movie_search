@@ -10,7 +10,6 @@
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   transform-origin: center bottom;
-
 }
 
 .movie-card:hover {
@@ -33,4 +32,26 @@
   max-width: 100%;
   border-radius: 4px;
   margin-bottom: 12px;
+}
+
+.movie-card.light-theme {
+  background-color: rgba(205, 203, 197, 0.71);
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie-card.light-theme:hover {
+  box-shadow: 0 8px 12px rgba(141, 6, 6, 0.42);
+}
+
+.movie-card.light-theme h2 {
+  color: #222;
+}
+
+.movie-card.light-theme p {
+  color: #2b2828;
+}
+
+.movie-card.light-theme .movie-poster {
+  border: 1px solid #ddd;
 }

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import {fetchMovieDetails} from "../../redux/slices";
+import { fetchMovieDetails } from '../../redux/slices';
 import { RootState, AppDispatch } from '../../redux';
 import { posterBaseUrl } from '../../constants';
 import './MovieDetails.css';
 import RatingStars from 'react-rating-stars-component';
-import {MoviesByGenre} from '../../components';
+import { MoviesByGenre } from '../../components';
 
 const MovieDetails: React.FC = () => {
     const { movieId } = useParams<{ movieId: string }>();
@@ -14,6 +14,7 @@ const MovieDetails: React.FC = () => {
     const dispatch = useDispatch<AppDispatch>();
     const movieDetails = useSelector((state: RootState) => state.movieDetails.details);
     const [clickedGenre, setClickedGenre] = useState<number | null>(null);
+    const isLightTheme = useSelector((state: RootState) => state.theme.isLightTheme);
 
     useEffect(() => {
         if (movieId) {
@@ -22,7 +23,6 @@ const MovieDetails: React.FC = () => {
     }, [dispatch, movieId]);
 
     const handleGenreClick = (genreId: number) => {
-
         setClickedGenre(genreId);
         navigate(`/movies/genre/${genreId}`);
     };
@@ -32,7 +32,7 @@ const MovieDetails: React.FC = () => {
     }
 
     return (
-        <div className="movie-details">
+        <div className={`movie-details ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
             <div className="movie-details-content">
                 <div className="poster-container">
                     <img
@@ -53,7 +53,7 @@ const MovieDetails: React.FC = () => {
                             {genre.name}
                         </button>
                     ))}
-                    <p>language: {movieDetails.original_language}</p>
+                    <p>Language: {movieDetails.original_language}</p>
                     <p>Release Date: {movieDetails.release_date.slice(0, 4)}</p>
                     <RatingStars
                         value={movieDetails.vote_average / 2}
@@ -70,6 +70,7 @@ const MovieDetails: React.FC = () => {
 };
 
 export default MovieDetails;
+
 
 
 

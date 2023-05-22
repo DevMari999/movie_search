@@ -79,8 +79,9 @@
     width: 80vh;
     flex-direction: row;
     height: 400px;
-    background: rgb(26, 24, 24);
+
 }
+
 
 .movie-poster2 {
     height: 300px;
