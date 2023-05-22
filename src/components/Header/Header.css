@@ -1,4 +1,3 @@
-
 .header {
   position: fixed;
   top: 0;
@@ -15,7 +14,8 @@
   justify-content: space-around;
 }
 
-.header:hover {
+.header:hover,
+.header.dark-theme:hover {
   background-color: rgba(1, 9, 33, 0.56);
   animation: shine 1s linear infinite;
 }
@@ -23,7 +23,6 @@
 .header.visible {
   transform: translateY(0);
 }
-
 
 .header.light-theme {
   background-color: rgba(205, 203, 197, 0.52);
@@ -36,38 +35,25 @@
   animation: none;
 }
 
-.header.light-theme .showAllMovies {
-  background-color: rgba(219, 74, 74, 0.91);
-  color: #d7e6f4;
-}
-
-.header.light-theme .showAllMovies::before {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-
 .header.dark-theme {
   background-color: rgba(32, 35, 38, 0.53);
   color: rgba(168, 214, 235, 0.55);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.header.dark-theme:hover {
-  background-color: rgba(1, 9, 33, 0.56);
-  animation: shine 1s linear infinite;
-}
-
-.header.dark-theme .showAllMovies {
+.header.dark-theme .showAllMovies,
+.header.dark-theme .searchByGenresButton {
   background-color: rgba(198, 21, 21, 0.86);
   color: #d7e6f4;
 }
 
-.header.dark-theme .showAllMovies::before {
+.header.dark-theme .showAllMovies::before,
+.header.dark-theme .searchByGenresButton::before {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-
-.showAllMovies {
+.showAllMovies,
+.searchByGenresButton {
   display: inline-block;
   padding: 10px 20px;
   border-radius: 4px;
@@ -78,7 +64,8 @@
   font-weight: bold;
 }
 
-.showAllMovies::before {
+.showAllMovies::before,
+.searchByGenresButton::before {
   content: '';
   position: absolute;
   top: 0;
@@ -90,11 +77,13 @@
   z-index: -1;
 }
 
-.showAllMovies:hover::before {
+.showAllMovies:hover::before,
+.searchByGenresButton:hover::before {
   left: 100%;
 }
 
-.showAllMovies:hover {
+.showAllMovies:hover,
+.searchByGenresButton:hover {
   transform: scale(1.05);
 }
 
@@ -116,24 +105,10 @@
   outline: none;
   transition: background-color 0.3s ease;
   position: fixed;
-
   right: 30px;
 }
 
 .themeToggle.light-theme {
   background-color: #f0f0f0;
-  color: #000;
-}
-
-.themeToggle.light-theme:hover {
-  background-color: #ccc;
-}
-
-.themeToggle.dark-theme {
-  background-color: #333;
-  color: #fff;
-}
-
-.themeToggle.dark-theme:hover {
-  background-color: #555;
+  color: #000
 }

@@ -6,6 +6,9 @@ import movieDetailsReducer from './slices/movieDetailsSlice';
 import moviesReducer from './slices/movieByGenreSlice';
 import themeReduser from './slices/themeSlice';
 
+
+
+
 const store = configureStore({
     reducer: {
         home: homeReducer,
@@ -14,6 +17,7 @@ const store = configureStore({
         movieDetails: movieDetailsReducer,
         movies: moviesReducer,
         theme: themeReduser,
+
     },
 });
 

@@ -1,0 +1,86 @@
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+
+.genresButton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(219, 74, 74, 0.91);
+    color: #d7e6f4;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.genresButton {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.genresButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transform: skewX(-30deg);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: -1;
+}
+
+.genresButton:hover::before {
+    left: 100%;
+}
+
+.genresButton:hover {
+    transform: scale(1.05);
+}
+
+.light-theme .genresButton {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #333333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .genresButton:hover {
+    background-color: rgba(205, 203, 197, 0.82);
+    animation: none;
+}
+
+.dark-theme .genresButton {
+    background-color: rgba(219, 12, 12, 0.76);
+    color: rgba(183, 195, 202, 0.81);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .genresButton:hover {
+    background-color: rgba(190, 6, 6, 0.74);
+    animation: shine 1s linear infinite;
+}
+
+@keyframes shine {
+    0% {
+        background-position: -200%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}

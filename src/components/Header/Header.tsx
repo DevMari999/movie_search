@@ -6,11 +6,13 @@ import { RootState } from '../../redux';
 import './Header.css';
 import { UserInfo } from '../../components';
 import { toggleTheme } from '../../redux/slices/themeSlice';
+import {useNavigate} from "react-router-dom";
 
 const Header: React.FC = () => {
     const isHeaderVisible = useSelector((state: RootState) => state.header.isVisible);
     const isLightTheme = useSelector((state: RootState) => state.theme.isLightTheme);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     useEffect(() => {
         let prevScrollPos = window.pageYOffset;
@@ -42,6 +44,10 @@ const Header: React.FC = () => {
         dispatch(toggleTheme());
     };
 
+    const handleSearchByGenres = () => {
+        navigate('/genres');
+    };
+
     return (
         <header className={`header ${isHeaderVisible ? 'visible' : ''} ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
             <Link to="/">
@@ -53,11 +59,14 @@ const Header: React.FC = () => {
             <button className={`themeToggle ${isLightTheme ? 'light-theme' : 'dark-theme'}`} onClick={handleThemeToggle}>
                 {isLightTheme ? '🌙' : '☀️'}
             </button>
-
+            <button className="searchByGenresButton" onClick={handleSearchByGenres}>
+                Search by Genres
+            </button>
             <UserInfo />
         </header>
     );
 };
 
 export default Header;
+
 

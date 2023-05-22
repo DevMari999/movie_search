@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { Home, MovieListing, MovieDetails, MoviesByGenre, PageNotFound, Header, Footer } from './components';
+import { Home, MovieListing, MovieDetails, MoviesByGenre, Genres, PageNotFound, Header, Footer } from './components';
 
 import './App.css';
 
@@ -12,6 +12,7 @@ const App: React.FC = () => {
                 <Route path="/movie-listing" element={<MovieListing />} />
                 <Route path="/movie-details/:movieId" element={<MovieDetails />} />
                 <Route path="/movies/genre/:genreId" element={<MoviesByGenre />} />
+                <Route path="/genres" element={<Genres />} />
                 <Route path="/*" element={<PageNotFound />} />
             </Routes>
             <Footer />
@@ -20,5 +21,6 @@ const App: React.FC = () => {
 };
 
 export default App;
+
 
 
