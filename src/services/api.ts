@@ -1,7 +1,9 @@
 import axios from 'axios';
+import {baseURL} from "../constants";
 
 const api = axios.create({
-    baseURL: 'https://api.themoviedb.org/3',
+    baseURL: baseURL,
+
 });
 
 api.interceptors.request.use((config) => {

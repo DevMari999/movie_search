@@ -1,30 +1,24 @@
-import React from 'react';
-import { Route, Routes} from "react-router-dom";
+import { Route, Routes } from 'react-router-dom';
+import { Home, MovieListing, MovieDetails, MoviesByGenre, PageNotFound, Header, Footer } from './components';
 
-import Header from "./components/Header/Header";
-import MovieDetails from "./components/MovieDetails/MovieDetails";
-import PageNotFound from "./components/PageNotFound/PageNotFound";
-import Footer from "./components/Footer/Footer";
-import Home from "./components/Home/Home";
-
-import './App.scss';
+import './App.css';
 
 const App: React.FC = () => {
-  return (
-    <div className="App">
-
-          <Header></Header>
-        <div className="container">
-          <Routes>
-          <Route path={"/"}  element={<Home/>} />
-          <Route path={"/id"} element={<MovieDetails/>} />
-          <Route element={<PageNotFound/>} />
-          </Routes>
+    return (
+        <div className="App">
+            <Header />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/movie-listing" element={<MovieListing />} />
+                <Route path="/movie-details/:movieId" element={<MovieDetails />} />
+                <Route path="/movies/genre/:genreId" element={<MoviesByGenre />} />
+                <Route path="/*" element={<PageNotFound />} />
+            </Routes>
+            <Footer />
         </div>
-          <Footer/>
-
-    </div>
-  );
-}
+    );
+};
 
 export default App;
+
+

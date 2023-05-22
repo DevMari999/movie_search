@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Light";
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: rgb(17, 17, 24);
+}
+
+.container {
+  margin: 0;
+}

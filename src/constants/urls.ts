@@ -1,12 +1,3 @@
-// const moviesBaseURL = 'https://api.themoviedb.org/3/movie/'
-//
-// const popular = "/popular"
-//
-// const urls = {
-//     movieAPI: {
-//         popular,
-//         details: (id: number) : string => `${}`
-//     }
-// }
+export const posterBaseUrl = 'https://image.tmdb.org/t/p/w500';
 
-export {}
+export const baseURL =  'https://api.themoviedb.org/3';

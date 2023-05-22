@@ -1,0 +1,36 @@
+.movie-card {
+  width: calc(20% - 1rem);
+  margin: 10px 10px 20px;
+  background-color: #222;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0, 0, 0);
+  color: #fff;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-origin: center bottom;
+
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(141, 6, 6, 0.96);
+}
+
+.movie-card h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.movie-card p {
+  margin-bottom: 4px;
+  font-size: 18px;
+}
+
+.movie-card .movie-poster {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}

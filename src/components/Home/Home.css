@@ -1,0 +1,99 @@
+.home {
+    background-image: url(../../images/poster.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    height: 100vh;
+}
+
+.search {
+    align-items: center;
+}
+
+.search input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    width: 60vh;
+    margin-top: 45vh;
+    height: 50px;
+}
+
+.search input[type="text"]:hover {
+    animation: wave 2.5s;
+}
+
+@keyframes wave {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.85);
+    }
+    30% {
+        box-shadow: 0 0 0 40vw rgba(255, 0, 0, 0.19);
+    }
+    100% {
+        box-shadow: 0 0 0 80vw rgba(255, 235, 0, 0);
+    }
+}
+
+.search button {
+    background-color: rgba(229, 31, 13, 0.75);
+    color: rgba(255, 255, 255, 0.97);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+    background-color: rgba(138, 5, 5, 0.76);
+}
+
+.search-results {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-results div {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: "Roboto Light";
+    color: rgb(245, 240, 240);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vh;
+    flex-direction: row;
+    height: 400px;
+    background: rgb(26, 24, 24);
+}
+
+.movie-poster2 {
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(230, 11, 11, 0.75);
+    transition: transform 0.3s ease;
+    margin: 10px;
+}
+
+.movie-poster2:hover {
+    transform: scale(1.05);
+}
+
+.resultsDiv {
+    flex-direction: column;
+}

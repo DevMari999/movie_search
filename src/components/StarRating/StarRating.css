@@ -1,0 +1,17 @@
+.star-rating {
+    display: inline-block;
+}
+
+.star-rating .star {
+    display: inline-block;
+    margin-right: 2px;
+    color: #ffd700;
+}
+
+.star-rating .star:last-child {
+    margin-right: 0;
+}
+
+.star-rating .star:before {
+    content: '\2605';
+}

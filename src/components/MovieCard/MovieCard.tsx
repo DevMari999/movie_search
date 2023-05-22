@@ -1,24 +1,34 @@
 import React from 'react';
-import {Movie} from "../../types/types";
-import "./MovieCard.scss"
+import { useNavigate } from 'react-router-dom';
+import { Movie } from '../../types';
+import {StarRating} from '../../components';
+import "./MovieCard.css";
+import { posterBaseUrl } from "../../constants";
 
 interface MovieCardProps {
     movie: Movie;
 }
-const posterBaseUrl = 'https://image.tmdb.org/t/p/w500';
-const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
 
-    console.log(movie)
+const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
+    const navigate = useNavigate();
+
+    const handleMovieClick = () => {
+        navigate(`/movie-details/${movie.id}`);
+    };
+
     return (
-        <div className="movie-card">
+        <div className="movie-card" onClick={handleMovieClick}>
             <img
                 className="movie-poster"
                 src={`${posterBaseUrl}${movie.poster_path}`}
                 alt={movie.title}
             />
             <h2>{movie.title}</h2>
-            <p>Release Date: {movie.release_date}</p>
-            <p>{movie.overview}</p>
+            {movie.release_date && (
+                <p>Release Date: {movie.release_date.slice(0, 4)}</p>
+            )}
+            <p>{movie.overview.length > 100 ? `${movie.overview.slice(0, 100)}...` : movie.overview}</p>
+            <StarRating value={movie.vote_average} />
         </div>
     );
 };

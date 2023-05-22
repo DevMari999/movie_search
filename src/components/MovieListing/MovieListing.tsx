@@ -1,32 +1,37 @@
-import React from 'react';
-import {useEffect, useState} from "react";
-import MovieCard from "../MovieCard/MovieCard";
-import api from "../../services/api";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../redux';
+import { setMovies, setCurrentPage} from "../../redux/slices";
+import {api} from '../../services';
+import {MovieCard} from '../../components';
 
-import "./MovieListing.scss"
+import './MovieListing.css';
 
-const MovieListing = () => {
-    const [movies, setMovies] = useState<any[]>([]);
-    const [currentPage, setCurrentPage] = useState(1);
+const MovieListing: React.FC = () => {
+    const dispatch = useDispatch();
+    const { movies, currentPage } = useSelector((state: RootState) => state.movieListing);
 
     useEffect(() => {
-        api.get('/movie/now_playing', { params: { page: currentPage } })
-            .then((response) => {
+        const fetchMovies = async () => {
+            try {
+                const response = await api.get('/movie/now_playing', { params: { page: currentPage } });
                 const newMovies = response.data.results;
-                setMovies(newMovies);
-            })
-            .catch((error) => {
+                dispatch(setMovies(newMovies));
+            } catch (error) {
                 console.error(error);
-            });
-    }, [currentPage]);
+            }
+        };
+
+        fetchMovies();
+    }, [currentPage, dispatch]);
 
     const goToNextPage = () => {
-        setCurrentPage((prevPage) => prevPage + 1);
+        dispatch(setCurrentPage(currentPage + 1));
     };
 
     const goToPreviousPage = () => {
         if (currentPage > 1) {
-            setCurrentPage((prevPage) => prevPage - 1);
+            dispatch(setCurrentPage(currentPage - 1));
         }
     };
 
@@ -39,10 +44,13 @@ const MovieListing = () => {
                 <button className="pagination-button" onClick={goToPreviousPage} disabled={currentPage === 1}>
                     Previous
                 </button>
-                <button className="pagination-button" onClick={goToNextPage}>Next</button>
+                <button className="pagination-button" onClick={goToNextPage}>
+                    Next
+                </button>
             </div>
         </div>
     );
 };
 
 export default MovieListing;
+

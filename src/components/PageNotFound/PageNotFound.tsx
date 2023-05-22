@@ -1,11 +1,8 @@
-import React from 'react';
 
-const PageNotFound = () => {
-    return (
-        <div>
-            Page not Found
-        </div>
-    );
+import './PageNotFound.css';
+
+const PageNotFound: React.FC = () => {
+    return <div className="pageNotFound"></div>;
 };
 
 export default PageNotFound;
