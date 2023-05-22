@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import api from "../../services/api";
-import { Movie } from "../../types";
+import { Movie} from "../../types";
 
 
 export interface MoviesState {
