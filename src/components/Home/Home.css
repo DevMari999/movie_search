@@ -31,10 +31,12 @@
     box-shadow: 0 0 5px white;
     border: solid white 1px;
 }
-
-.search input[type="text"]:hover, .search-input[type="text"]:active {
+.search input[type="text"]:hover,
+.search input[type="text"]:active,
+.search input[type="text"].focused {
     animation: wave 2.5s;
 }
+
 @keyframes wave {
     0% {
         box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.85);
@@ -46,6 +48,7 @@
         box-shadow: 0 0 0 80vw rgba(255, 235, 0, 0);
     }
 }
+
 
 .search-results {
     margin-top: 10px;

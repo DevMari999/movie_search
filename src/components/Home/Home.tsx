@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setSearchQuery, setSearchResults } from '../../redux/slices';
 import { RootState } from '../../redux';
@@ -9,11 +9,20 @@ import './Home.css';
 const Home: React.FC = () => {
     const dispatch = useDispatch();
     const searchQuery = useSelector((state: RootState) => state.home.searchQuery);
+    const inputRef = useRef<HTMLInputElement>(null);
+    const [isInputFocused, setIsInputFocused] = useState(false);
 
     const handleSearchInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         dispatch(setSearchQuery(e.target.value));
     };
 
+    const handleInputClick = () => {
+        setIsInputFocused(true);
+    };
+
+    const handleInputBlur = () => {
+        setIsInputFocused(false);
+    };
 
     useEffect(() => {
         const fetchSearchResults = async () => {
@@ -41,14 +50,18 @@ const Home: React.FC = () => {
     return (
         <div className="home">
             <div className="input-container">
-            <form className="search">
-                <input
-                    type="text"
-                    value={searchQuery}
-                    onChange={handleSearchInputChange}
-                    placeholder="Search by movie name"
-                />
-            </form>
+                <form className="search">
+                    <input
+                        type="text"
+                        value={searchQuery}
+                        onChange={handleSearchInputChange}
+                        placeholder="Search by movie name"
+                        ref={inputRef}
+                        onClick={handleInputClick}
+                        onBlur={handleInputBlur}
+                        className={isInputFocused ? 'focused' : ''}
+                    />
+                </form>
             </div>
             {searchQuery && <SearchResults />}
         </div>
@@ -56,6 +69,7 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
 
 
 
