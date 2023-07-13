@@ -27,6 +27,7 @@ const MoviesByGenre: React.FC = () => {
         if (currentPage < totalPages) {
             const nextPage: FetchMoviesByGenrePayload = { genreId: parseInt(genreId || ''), page: currentPage + 1 };
             dispatch(fetchMoviesByGenre(nextPage));
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
         }
     };
 
@@ -34,6 +35,7 @@ const MoviesByGenre: React.FC = () => {
         if (currentPage > 1) {
             const previousPage: FetchMoviesByGenrePayload = { genreId: parseInt(genreId || ''), page: currentPage - 1 };
             dispatch(fetchMoviesByGenre(previousPage));
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
         }
     };
 
@@ -45,18 +47,18 @@ const MoviesByGenre: React.FC = () => {
     return (
         <div className={`movieByGenre ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
             <div className="movieByGenre-container">
-            {movies.map((movie: Movie) => (
-                <MovieCard key={movie.id} movie={movie} />
-            ))}
+                {movies.map((movie: Movie) => (
+                    <MovieCard key={movie.id} movie={movie} />
+                ))}
 
-            <div className='pagination'>
-                <button className='general-button' onClick={goToPreviousPage} disabled={currentPage === 1}>
-                    Previous
-                </button>
-                <button className='general-button' onClick={goToNextPage} disabled={currentPage === totalPages}>
-                    Next
-                </button>
-            </div>
+                <div className='pagination'>
+                    <button className='general-button' onClick={goToPreviousPage} disabled={currentPage === 1}>
+                        Previous
+                    </button>
+                    <button className='general-button' onClick={goToNextPage} disabled={currentPage === totalPages}>
+                        Next
+                    </button>
+                </div>
             </div>
         </div>
     );

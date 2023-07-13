@@ -4,6 +4,7 @@
   justify-content: center;
   flex-direction: column;
   background-color: rgba(4, 4, 4, 0.93);
+  min-height: 100vh;
 }
 
 .movie-listing-container {

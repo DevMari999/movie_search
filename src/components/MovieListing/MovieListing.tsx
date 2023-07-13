@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux';
 import { setMovies, setCurrentPage } from '../../redux/slices';
 import { api } from '../../services';
-import {MovieCard, MoviesByGenre} from '../../components';
+import { MovieCard, MoviesByGenre } from '../../components';
 import './MovieListing.css';
 
 const MovieListing: React.FC = () => {
@@ -27,29 +27,31 @@ const MovieListing: React.FC = () => {
 
     const goToNextPage = () => {
         dispatch(setCurrentPage(currentPage + 1));
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
     };
 
     const goToPreviousPage = () => {
         if (currentPage > 1) {
             dispatch(setCurrentPage(currentPage - 1));
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
         }
     };
 
     return (
         <div className={`movie-listing ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
             <div className="movie-listing-container">
-            {movies.map((movie) => (
-                <MovieCard key={movie.id} movie={movie} />
-            ))}
+                {movies.map((movie) => (
+                    <MovieCard key={movie.id} movie={movie} />
+                ))}
 
-            <div className="pagination">
-                <button className="general-button" onClick={goToPreviousPage} disabled={currentPage === 1}>
-                    Previous
-                </button>
-                <button className="general-button" onClick={goToNextPage}>
-                    Next
-                </button>
-            </div>
+                <div className="pagination">
+                    <button className="general-button" onClick={goToPreviousPage} disabled={currentPage === 1}>
+                        Previous
+                    </button>
+                    <button className="general-button" onClick={goToNextPage}>
+                        Next
+                    </button>
+                </div>
             </div>
         </div>
     );

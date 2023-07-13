@@ -11,7 +11,7 @@
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   transform-origin: center bottom;
-  min-height: 500px;
+  min-height: 550px;
 }
 
 .description-container {

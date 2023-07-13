@@ -96,14 +96,14 @@ flex-direction: row;
 }
 @media (min-width: 480px) and (max-width: 768px) {
     .movie-details {
-        height: fit-content;
+        min-height: fit-content;
         padding-top: 80px;
         padding-bottom: 80px;
 
     }
 
     .movie-details-content {
-        flex-direction: column;
+        /*flex-direction: column;*/
         width: 90%;
         padding: 20px;
     }
@@ -111,7 +111,7 @@ flex-direction: row;
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .movie-details {
-        height: fit-content;
+        min-height: fit-content;
         padding-top: 80px;
         padding-bottom: 80px;
 
@@ -121,7 +121,7 @@ flex-direction: row;
      }
 
     .movie-details-content {
-        flex-direction: column;
+        /*flex-direction: column;*/
         width: 90%;
         padding: 20px;
     }

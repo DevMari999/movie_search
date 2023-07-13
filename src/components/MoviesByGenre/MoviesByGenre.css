@@ -4,6 +4,7 @@
     justify-content: space-evenly;
     flex-direction: row;
     background-color: rgba(4, 4, 4, 0.93);
+    min-height: 100vh;
 }
 .movieByGenre-container {
     display: flex;
