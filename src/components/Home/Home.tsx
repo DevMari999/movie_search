@@ -14,6 +14,7 @@ const Home: React.FC = () => {
         dispatch(setSearchQuery(e.target.value));
     };
 
+
     useEffect(() => {
         const fetchSearchResults = async () => {
             try {

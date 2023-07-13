@@ -93,16 +93,12 @@
         width: 320px;
         height: 40px;
     }
-    .search input[type="text"]:focus{
-        animation: wave 2.5s;
-    }
+
 }
 @media (min-width: 480px) and (max-width: 768px) {
     .search input[type="text"] {
         width: 600px;
         height: 40px;
     }
-    .search input[type="text"]:focus{
-        animation: wave 2.5s;
-    }
+
 }
