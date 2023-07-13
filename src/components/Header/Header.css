@@ -1,3 +1,4 @@
+/* Regular Header */
 .header {
   position: fixed;
   top: 0;
@@ -13,9 +14,11 @@
   height: 70px;
   z-index: 1;
 }
+
 .nav-div {
   margin-right: 70px;
 }
+
 .nav-link {
   height: fit-content;
   font-family: Arial;
@@ -29,6 +32,7 @@
 .nav-link:hover {
   text-shadow: 0 0 10px white;
 }
+
 .header:hover,
 .header.dark-theme:hover {
   background-color: rgb(16, 16, 20);
@@ -69,4 +73,120 @@
   position: fixed;
   right: 30px;
   background-color: transparent;
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  display: none;
+}
+
+.mobileMenuItem {
+  font-family: Arial;
+  font-size: 18px;
+  color: white;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.mobileMenuItem:hover {
+  text-shadow: 0 0 10px white;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 767px) {
+  .nav-div {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 70px;
+    right: 0;
+    padding: 20px;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .mobileMenuToggle {
+    cursor: pointer;
+    margin-right: 30px;
+    background: transparent;
+    border: none;
+  }
+
+  .mobileMenuToggle img {
+    min-height: 30px;
+    width: 30px;
+  }
+  .burger {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+  }
+  .burger-element {
+    height: 3px;
+    width: 15px;
+    margin: 10px;
+    color: white;
+    z-index: 10;
+
+  }
+
+  .themeToggle {
+    position: relative;
+  }
+
+  .navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 0;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /*background: #151414;*/
+    position: absolute;
+  }
+
+  .navigation.open {
+    animation: dropdownAnimation 0.3s ease forwards;
+    display: block;
+  }
+
+  @keyframes dropdownAnimation {
+    from {
+      max-height: 0;
+    }
+    to {
+      max-height: 500px;
+    }
+  }
+
+  .navigation ul {
+    margin: 10px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navigation li {
+    margin: 10px 0;
+  }
+
+  .navigation a {
+    color: white;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobileMenuToggle {
+    display: none;
+  }
 }

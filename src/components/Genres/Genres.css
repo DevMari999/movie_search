@@ -52,4 +52,9 @@
     .background-img {
         padding: 10px 10px 50px;
     }
+    .genres {
+        height: fit-content;
+        min-height: 100vh;
+    }
+
 }

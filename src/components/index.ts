@@ -7,6 +7,5 @@ export { default as MovieListing } from './MovieListing/MovieListing';
 export { default as MoviesByGenre } from './MoviesByGenre/MoviesByGenre';
 export { default as PageNotFound } from './PageNotFound/PageNotFound';
 export { default as SearchResults } from './SearchResults/SearchResults';
-export { default as UserInfo } from './UserInfo/UserInfo';
 export { default as StarRating } from './StarRating/StarRating';
 export { default as Genres } from './Genres/Genres';
