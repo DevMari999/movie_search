@@ -28,7 +28,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
                 alt={movie.title}
             />
             <div className="description-container">
-            <h2>{movie.title}</h2>
+            <h2>{`${movie.title.slice(0, 70)}`}</h2>
             {movie.release_date && <p>Release Date: {movie.release_date.slice(0, 4)}</p>}
             <p>{movie.overview.length > 100 ? `${movie.overview.slice(0, 50)}...` : movie.overview}</p>
             <StarRating value={movie.vote_average} />

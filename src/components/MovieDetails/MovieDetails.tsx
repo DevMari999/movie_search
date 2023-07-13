@@ -32,44 +32,38 @@ const MovieDetails: React.FC = () => {
         return <div>Loading...</div>;
     }
 
-    return (
+    const ratingStarConfig = {
+        size: 18,
+        activeColor: '#c00e0e',
+        color: '#ffffff',
+        edit: false,
+    };
 
+    return (
         <div className={`movie-details ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
             <div className="background-img">
-                <img src={background}/>
+                <img src={background} alt="Background" />
             </div>
             <div className={`movie-details-content ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
                 <div className="poster-container">
-                    <img
-                        className="movie-poster"
-                        src={`${posterBaseUrl}${movieDetails.poster_path}`}
-                        alt={movieDetails.title}
-                    />
+                    <img className="movie-poster" src={`${posterBaseUrl}${movieDetails.poster_path}`} alt={movieDetails.title} />
                 </div>
                 <div className="description">
-                   <div className="header-description"> <h1>{movieDetails.title}</h1></div>
+                    <div className="header-description">
+                        <h1>{movieDetails.title}</h1>
+                    </div>
                     <p>{movieDetails.overview}</p>
                     <div className="description-button-container">
-                    {movieDetails.genres.map((genre) => (
-                        <button
-                            key={genre.id}
-                            onClick={() => handleGenreClick(genre.id)}
-                            className="general-button"
-                        >
-                            {genre.name}
-                        </button>
-                    ))}
+                        {movieDetails.genres.map((genre) => (
+                            <button key={genre.id} onClick={() => handleGenreClick(genre.id)} className="general-button">
+                                {genre.name}
+                            </button>
+                        ))}
                     </div>
                     <p>Language: {movieDetails.original_language}</p>
                     <p>Release Date: {movieDetails.release_date.slice(0, 4)}</p>
-                    <RatingStars
-                        value={movieDetails.vote_average / 2}
-                        count={5}
-                        size={24}
-                        edit={false}
-                    />
-
-            </div>
+                    <RatingStars value={movieDetails.vote_average / 2} {...ratingStarConfig} />
+                </div>
             </div>
             {clickedGenre !== null && <MoviesByGenre />}
         </div>

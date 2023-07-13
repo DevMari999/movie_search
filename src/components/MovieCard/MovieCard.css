@@ -16,6 +16,8 @@
 
 .description-container {
   min-height: 150px;
+  max-height: 150px;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -26,7 +28,7 @@
 }
 
 .description-container h2 {
-  font-size: 24px;
+  font-size: 16px;
   margin-bottom: 8px;
   font-weight: bold;
 }

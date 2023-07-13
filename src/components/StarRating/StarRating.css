@@ -5,7 +5,6 @@
 .star-rating .star {
     display: inline-block;
     margin-right: 2px;
-    color: white;
 }
 
 .star-rating .star:last-child {
