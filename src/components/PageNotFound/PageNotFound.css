@@ -1,7 +1,7 @@
 .pageNotFound {
     width: 100vw;
     height: 100vh;
-    background-image: url("../../images/404.jpg");
+    background-image: url("../../assets/404.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

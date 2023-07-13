@@ -3,20 +3,35 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem;
-  z-index: 999;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   opacity: 1;
   transform: translateY(-100%);
   transition: transform 0.5s ease-in-out, background-color 0.3s ease;
-  height: 80px;
   display: flex;
-  justify-content: space-around;
+  justify-content: right;
+  align-items: center;
+  height: 70px;
+  z-index: 1;
+}
+.nav-div {
+  margin-right: 70px;
+}
+.nav-link {
+  height: fit-content;
+  font-family: Arial;
+  font-size: 18px;
+  color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 7px;
 }
 
+.nav-link:hover {
+  text-shadow: 0 0 10px white;
+}
 .header:hover,
 .header.dark-theme:hover {
-  background-color: rgba(1, 9, 33, 0.56);
+  background-color: rgb(16, 16, 20);
   animation: shine 1s linear infinite;
 }
 
@@ -25,75 +40,22 @@
 }
 
 .header.light-theme {
-  background-color: rgba(205, 203, 197, 0.52);
-  color: #333333;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(233, 227, 227, 0.74);
 }
 
 .header.light-theme:hover {
-  background-color: rgba(205, 203, 197, 0.82);
-  animation: none;
+  background-color: rgba(234, 232, 232, 0.88);
 }
 
-.header.dark-theme {
-  background-color: rgba(32, 35, 38, 0.53);
-  color: rgba(168, 214, 235, 0.55);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.header.dark-theme .showAllMovies,
-.header.dark-theme .searchByGenresButton {
-  background-color: rgba(198, 21, 21, 0.86);
-  color: #d7e6f4;
-}
-
-.header.dark-theme .showAllMovies::before,
-.header.dark-theme .searchByGenresButton::before {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.showAllMovies,
-.searchByGenresButton {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-size: 18px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
+.nav-link.light-theme {
+  color: black;
+  text-shadow: black;
   font-weight: bold;
 }
 
-.showAllMovies::before,
-.searchByGenresButton::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  transform: skewX(-30deg);
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  z-index: -1;
-}
-
-.showAllMovies:hover::before,
-.searchByGenresButton:hover::before {
-  left: 100%;
-}
-
-.showAllMovies:hover,
-.searchByGenresButton:hover {
-  transform: scale(1.05);
-}
-
-@keyframes shine {
-  0% {
-    background-position: -200%;
-  }
-  100% {
-    background-position: 200%;
-  }
+.header.dark-theme {
+  background-color: rgba(16, 16, 20, 0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .themeToggle {
@@ -106,9 +68,5 @@
   transition: background-color 0.3s ease;
   position: fixed;
   right: 30px;
-}
-
-.themeToggle.light-theme {
-  background-color: #f0f0f0;
-  color: #000
+  background-color: transparent;
 }

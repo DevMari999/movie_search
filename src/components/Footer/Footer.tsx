@@ -8,8 +8,7 @@ const Footer: React.FC = () => {
 
     return (
         <div className={`footer ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
-            <div>Tetflix</div>
-            <div>©2023 by tetflix.com, Inc.</div>
+            <div className="footer-text">© 2023</div>
         </div>
     );
 };

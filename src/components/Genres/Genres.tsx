@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import {  useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import {  useSelector} from 'react-redux';
+import { useNavigate} from 'react-router-dom';
 import { RootState } from '../../redux';
 import { Genre } from "../../types";
 import {api} from "../../services";
+import background from '../../assets/genresbackground.png';
+import "../../styles/common.css"
+
+
 
 
 
@@ -44,12 +48,17 @@ const Genres: React.FC = () => {
 
     return (
         <div className={containerClassName}>
+            <div className="background-img">
+                <img src={background}/>
+            </div>
 
+         <div className="genre-buttons-container">
             {genres.map((genre: Genre) => (
-                <button className="genresButton" key={genre.id} onClick={() => handleGenreClick(genre.id)}>
+                <button className="general-button" key={genre.id} onClick={() => handleGenreClick(genre.id)}>
                     {genre.name}
                 </button>
             ))}
+        </div>
         </div>
     );
 };

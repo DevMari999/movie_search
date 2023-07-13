@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux';
 import { setMovies, setCurrentPage } from '../../redux/slices';
 import { api } from '../../services';
-import { MovieCard } from '../../components';
+import {MovieCard, MoviesByGenre} from '../../components';
 import './MovieListing.css';
 
 const MovieListing: React.FC = () => {
@@ -37,16 +37,19 @@ const MovieListing: React.FC = () => {
 
     return (
         <div className={`movie-listing ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
+            <div className="movie-listing-container">
             {movies.map((movie) => (
                 <MovieCard key={movie.id} movie={movie} />
             ))}
+
             <div className="pagination">
-                <button className="pagination-button" onClick={goToPreviousPage} disabled={currentPage === 1}>
+                <button className="general-button" onClick={goToPreviousPage} disabled={currentPage === 1}>
                     Previous
                 </button>
-                <button className="pagination-button" onClick={goToNextPage}>
+                <button className="general-button" onClick={goToNextPage}>
                     Next
                 </button>
+            </div>
             </div>
         </div>
     );

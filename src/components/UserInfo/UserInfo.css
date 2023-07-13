@@ -16,7 +16,7 @@
 .logo:hover,
 .userImage:hover {
     transform: scale(1.2);
-    box-shadow: 0 0 10px 5px rgba(192, 8, 8, 0.78), 0 0 20px 10px rgba(251, 2, 2, 0.76);
+    /*box-shadow: 0 0 10px 5px rgba(192, 8, 8, 0.78), 0 0 20px 10px rgba(251, 2, 2, 0.76);*/
 }
 
 .logo:active,

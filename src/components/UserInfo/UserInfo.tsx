@@ -1,5 +1,5 @@
 import React from 'react';
-import user from "../../images/user.jpg";
+import user from "../../assets/user.jpg";
 import './UserInfo.css';
 const UserInfo: React.FC = () => {
     return (

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { setHeaderVisibility } from '../../redux/slices';
 import { RootState } from '../../redux';
@@ -44,25 +44,23 @@ const Header: React.FC = () => {
         dispatch(toggleTheme());
     };
 
-    const handleSearchByGenres = () => {
-        navigate('/genres');
-    };
-
     return (
         <header className={`header ${isHeaderVisible ? 'visible' : ''} ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
-            <Link to="/">
-                <div className="logo">HOME</div>
+            <div className="nav-div">
+            <Link to="/" className={`nav-link ${isHeaderVisible ? 'visible' : ''} ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
+                HOME
             </Link>
-            <Link to="/movie-listing">
-                <button className="showAllMovies">Show All Movies</button>
+            <Link to="/movie-listing" className={`nav-link ${isHeaderVisible ? 'visible' : ''} ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
+                ALL MOVIES
             </Link>
+            <Link to="/genres" className={`nav-link ${isHeaderVisible ? 'visible' : ''} ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
+                BY GENRES
+            </Link>
+            </div>
             <button className={`themeToggle ${isLightTheme ? 'light-theme' : 'dark-theme'}`} onClick={handleThemeToggle}>
                 {isLightTheme ? '🌙' : '☀️'}
             </button>
-            <button className="searchByGenresButton" onClick={handleSearchByGenres}>
-                Search by Genres
-            </button>
-            <UserInfo />
+            {/*<UserInfo />*/}
         </header>
     );
 };

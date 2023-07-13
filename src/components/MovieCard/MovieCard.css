@@ -1,47 +1,58 @@
 .movie-card {
-  width: calc(20% - 1rem);
-  margin: 10px 10px 20px;
+  margin: 10px 10px 15px;
   background-color: #222;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgb(0, 0, 0);
   color: #fff;
   padding: 16px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   transform-origin: center bottom;
+  height: fit-content;
+
 }
 
+.description-container {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .movie-card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 12px rgba(141, 6, 6, 0.96);
 }
 
-.movie-card h2 {
+.description-container h2 {
   font-size: 24px;
   margin-bottom: 8px;
   font-weight: bold;
+
 }
 
 .movie-card p {
   margin-bottom: 4px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .movie-card .movie-poster {
   max-width: 100%;
+  /*min-width: 250px;*/
   border-radius: 4px;
   margin-bottom: 12px;
 }
 
 .movie-card.light-theme {
-  background-color: rgba(205, 203, 197, 0.71);
+  background-color: rgb(205, 198, 194);
   color: #222;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .movie-card.light-theme:hover {
-  box-shadow: 0 8px 12px rgba(141, 6, 6, 0.42);
+  box-shadow: 0 8px 12px #1c1b1b;
 }
 
 .movie-card.light-theme h2 {
@@ -55,3 +66,20 @@
 .movie-card.light-theme .movie-poster {
   border: 1px solid #ddd;
 }
+@media (min-width: 480px) {
+  .movie-card {
+    margin: 20px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .movie-card {
+    min-height: 500px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .movie-card {
+    min-height: 500px;
+  }
+}
+

@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {setSearchQuery, setSearchResults} from "../../redux/slices";
+import { setSearchQuery, setSearchResults } from '../../redux/slices';
 import { RootState } from '../../redux';
-
 import { api } from '../../services';
-import {SearchResults} from '../../components';
-
+import { SearchResults } from '../../components';
 import './Home.css';
 
 const Home: React.FC = () => {
@@ -16,41 +14,48 @@ const Home: React.FC = () => {
         dispatch(setSearchQuery(e.target.value));
     };
 
-    const handleSearchSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
+    useEffect(() => {
+        const fetchSearchResults = async () => {
+            try {
+                const response = await api.get('/search/movie', {
+                    params: {
+                        query: searchQuery,
+                    },
+                });
 
-        try {
-            const response = await api.get('/search/movie', {
-                params: {
-                    query: searchQuery,
-                },
-            });
+                const results = response.data.results;
+                dispatch(setSearchResults(results));
+            } catch (error) {
+                console.error('Error occurred during API request:', error);
+            }
+        };
 
-            const results = response.data.results;
-            dispatch(setSearchResults(results));
-        } catch (error) {
-            console.error('Error occurred during API request:', error);
+        if (searchQuery) {
+            fetchSearchResults();
+        } else {
+            dispatch(setSearchResults([]));
         }
-    };
+    }, [dispatch, searchQuery]);
 
     return (
         <div className="home">
-            <form className="search" onSubmit={handleSearchSubmit}>
+            <div className="input-container">
+            <form className="search">
                 <input
                     type="text"
                     value={searchQuery}
                     onChange={handleSearchInputChange}
                     placeholder="Search by movie name"
                 />
-                <button type="submit">Search</button>
             </form>
-
+            </div>
             {searchQuery && <SearchResults />}
-
         </div>
     );
 };
 
 export default Home;
+
+
 
 

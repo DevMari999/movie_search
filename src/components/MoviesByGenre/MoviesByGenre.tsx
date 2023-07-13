@@ -6,6 +6,7 @@ import { Movie } from '../../types';
 import { useParams } from 'react-router-dom';
 import { MovieCard } from '../../components';
 import './MoviesByGenre.css';
+import '../../styles/common.css';
 
 const MoviesByGenre: React.FC = () => {
     const dispatch = useDispatch<AppDispatch>();
@@ -43,19 +44,20 @@ const MoviesByGenre: React.FC = () => {
 
     return (
         <div className={`movieByGenre ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
+            <div className="movieByGenre-container">
             {movies.map((movie: Movie) => (
                 <MovieCard key={movie.id} movie={movie} />
             ))}
 
             <div className='pagination'>
-                <button className='pagination-button' onClick={goToPreviousPage} disabled={currentPage === 1}>
+                <button className='general-button' onClick={goToPreviousPage} disabled={currentPage === 1}>
                     Previous
                 </button>
-                <button className='pagination-button' onClick={goToNextPage} disabled={currentPage === totalPages}>
+                <button className='general-button' onClick={goToNextPage} disabled={currentPage === totalPages}>
                     Next
                 </button>
             </div>
-
+            </div>
         </div>
     );
 };

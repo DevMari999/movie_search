@@ -7,8 +7,6 @@ import moviesReducer from './slices/movieByGenreSlice';
 import themeReduser from './slices/themeSlice';
 
 
-
-
 const store = configureStore({
     reducer: {
         home: homeReducer,

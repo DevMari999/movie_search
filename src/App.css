@@ -2,15 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto Light";
+  font-family: Arial;
+
 }
 
 a {
   text-decoration: none;
-}
-
-body {
-  background: rgba(30, 30, 35, 0.98);
 }
 
 .container {

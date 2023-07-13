@@ -1,13 +1,30 @@
 .search-results {
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
+    width: 80%;
+
 }
 
-.slick-slide {
-    margin: 0 10px;
-    transition: all 0.3s ease;
+.search-results div {
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 5px;
+    width: 100%;
+
 }
 
+.slick-slider {
+    height: 100px;
+    width: 100%;
+}
+
+.slick-list {
+    width: 100%;
+    overflow: hidden;
+}
 .slick-prev,
 .slick-next {
     position: absolute;
@@ -49,16 +66,17 @@
 
 .slick-prev,
 .slick-next {
-    background-color: rgba(255, 0, 0, 0.55);
+    background-color: rgba(138, 34, 34, 0.63);
 }
 
 .slick-prev:hover,
 .slick-next:hover {
-    background-color: rgba(100, 9, 9, 0.89);
+    background-color: rgba(93, 12, 12, 0.84);
 }
 
 
 .search-results.light-theme {
-    background-color: rgba(205, 203, 197, 0.86);
+    background-color: rgba(219, 216, 215, 0.89);
 }
+
 

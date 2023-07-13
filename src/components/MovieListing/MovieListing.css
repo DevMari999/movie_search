@@ -1,56 +1,22 @@
-@media (max-width: 768px) {
-  .movie-card {
-    width: 100%;
-  }
-
-  .movie-listing {
-    justify-content: center;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .movie-card {
-    width: calc(50% - 1rem);
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .movie-card {
-    width: calc(33.33% - 1rem);
-  }
-}
-
-@media (min-width: 1441px) and (max-width: 2560px) {
-  .movie-card {
-    width: calc(15% - 1rem);
-  }
-}
-
-@media (min-width: 2561px) and (max-width: 3840px) {
-  .movie-card {
-    width: calc(10% - 1rem);
-  }
-}
-
-@media (min-width: 3841px) {
-  .movie-card {
-    width: calc(10% - 1rem);
-  }
-}
-
-
 .movie-listing {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  flex-direction: row;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(4, 4, 4, 0.93);
+}
+
+.movie-listing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   margin-top: 100px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-bottom: 100px;
 }
 
 .movie-listing.light-theme {
-  background-color: rgba(205, 203, 197, 0.82);
+  background-color: rgb(226, 223, 223);
 }
 
 .movie-listing h2 {
@@ -71,76 +37,3 @@
   width: 100%;
 }
 
-
-
-
-.movie-listing.dark-theme .pagination .pagination-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: rgba(128, 6, 6, 0.84);
-  color: #d7e6f4;
-  border-radius: 4px;
-  font-size: 18px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  font-weight: bold;
-  margin: 10px;
-}
-
-.movie-listing.dark-theme .pagination .pagination-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.3);
-  transform: skewX(-30deg);
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  z-index: -1;
-}
-
-.movie-listing.dark-theme .pagination .pagination-button:hover::before {
-  left: 100%;
-}
-
-.movie-listing.dark-theme .pagination .pagination-button:hover {
-  transform: scale(1.05);
-}
-
-/* Light Theme */
-.movie-listing.light-theme .pagination .pagination-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: rgba(219, 74, 74, 0.91);
-  color: #d7e6f4;
-  border-radius: 4px;
-  font-size: 18px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  font-weight: bold;
-  margin: 10px;
-}
-
-.movie-listing.light-theme .pagination .pagination-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.3);
-  transform: skewX(-30deg);
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  z-index: -1;
-}
-
-.movie-listing.light-theme .pagination .pagination-button:hover::before {
-  left: 100%;
-}
-
-.movie-listing.light-theme .pagination .pagination-button:hover {
-  transform: scale(1.05);
-}

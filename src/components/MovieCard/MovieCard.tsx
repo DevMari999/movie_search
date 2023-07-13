@@ -6,6 +6,7 @@ import { StarRating } from '../../components';
 import './MovieCard.css';
 import { posterBaseUrl } from '../../constants';
 import { RootState } from '../../redux';
+import '../../styles/common.css';
 
 interface MovieCardProps {
     movie: Movie;
@@ -26,10 +27,12 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
                 src={`${posterBaseUrl}${movie.poster_path}`}
                 alt={movie.title}
             />
+            <div className="description-container">
             <h2>{movie.title}</h2>
             {movie.release_date && <p>Release Date: {movie.release_date.slice(0, 4)}</p>}
-            <p>{movie.overview.length > 100 ? `${movie.overview.slice(0, 100)}...` : movie.overview}</p>
+            <p>{movie.overview.length > 100 ? `${movie.overview.slice(0, 50)}...` : movie.overview}</p>
             <StarRating value={movie.vote_average} />
+        </div>
         </div>
     );
 };

@@ -7,6 +7,7 @@ import { posterBaseUrl } from '../../constants';
 import './MovieDetails.css';
 import RatingStars from 'react-rating-stars-component';
 import { MoviesByGenre } from '../../components';
+import background from "../../assets/genresbackground.png";
 
 const MovieDetails: React.FC = () => {
     const { movieId } = useParams<{ movieId: string }>();
@@ -32,8 +33,12 @@ const MovieDetails: React.FC = () => {
     }
 
     return (
+
         <div className={`movie-details ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
-            <div className="movie-details-content">
+            <div className="background-img">
+                <img src={background}/>
+            </div>
+            <div className={`movie-details-content ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
                 <div className="poster-container">
                     <img
                         className="movie-poster"
@@ -42,27 +47,29 @@ const MovieDetails: React.FC = () => {
                     />
                 </div>
                 <div className="description">
-                    <h1>{movieDetails.title}</h1>
+                   <div className="header-description"> <h1>{movieDetails.title}</h1></div>
                     <p>{movieDetails.overview}</p>
+                    <div className="description-button-container">
                     {movieDetails.genres.map((genre) => (
                         <button
                             key={genre.id}
                             onClick={() => handleGenreClick(genre.id)}
-                            className="genre-button"
+                            className="general-button"
                         >
                             {genre.name}
                         </button>
                     ))}
+                    </div>
                     <p>Language: {movieDetails.original_language}</p>
                     <p>Release Date: {movieDetails.release_date.slice(0, 4)}</p>
                     <RatingStars
                         value={movieDetails.vote_average / 2}
                         count={5}
                         size={24}
-                        activeColor="#ffd700"
                         edit={false}
                     />
-                </div>
+
+            </div>
             </div>
             {clickedGenre !== null && <MoviesByGenre />}
         </div>
