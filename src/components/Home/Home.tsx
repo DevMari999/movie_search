@@ -16,7 +16,7 @@ const Home: React.FC = () => {
         dispatch(setSearchQuery(e.target.value));
     };
 
-    const handleInputClick = () => {
+    const handleInputInteraction = () => {
         setIsInputClicked(true);
     };
 
@@ -58,7 +58,8 @@ const Home: React.FC = () => {
                         type="text"
                         value={searchQuery}
                         onChange={handleSearchInputChange}
-                        onClick={handleInputClick}
+                        onTouchStart={handleInputInteraction}
+                        onFocus={handleInputInteraction}
                         placeholder="Search by movie name"
                         className={isInputClicked ? 'clicked' : ''}
                     />
@@ -70,6 +71,7 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
 
 
 
