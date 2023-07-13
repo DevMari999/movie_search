@@ -73,7 +73,7 @@
 /*MOVIE CARDS*/
 @media (max-width: 480px) {
     .movie-card {
-        width: calc(90% - 1rem);
+        width: calc(90% - 20px);
     }
 }
 @media (min-width: 480px) and (max-width: 768px) {
@@ -81,24 +81,24 @@
         width: 100%;
     }
     .movie-card {
-        width: calc(30% - 1rem);
+        width: calc(30% - 5px);
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .movie-card {
-        width: calc(22% - 1rem);
+        width: calc(22% - 5px);
     }
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
     .movie-card {
-        width: calc(20% - 1rem);
+        width: calc(20% - 5px);
     }
 }
 
 @media (min-width: 1441px )  {
     .movie-card {
-        width: calc(15% - 1rem);
+        width: calc(15% - 5px);
     }
 }

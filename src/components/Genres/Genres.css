@@ -6,6 +6,9 @@
     justify-content: center;
     background-color: rgba(21, 20, 20, 0.96);
     width: 100%;
+    min-height: fit-content;
+    padding-top: 100px;
+    padding-bottom: 100px;
 
 }
 .background-img {
