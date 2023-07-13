@@ -38,18 +38,19 @@ const Home: React.FC = () => {
         }
     }, [dispatch, searchQuery]);
 
+
     return (
         <div className="home">
             <div className="input-container">
                 <form className="search">
-                    <button className="input-button">
+                    <div className="input-div">
                         <input
                             type="text"
                             value={searchQuery}
                             onChange={handleSearchInputChange}
                             placeholder="Search by movie name"
                         />
-                    </button>
+                    </div>
                 </form>
             </div>
 
