@@ -16,11 +16,11 @@ const Home: React.FC = () => {
         dispatch(setSearchQuery(e.target.value));
     };
 
-    const handleInputClick = () => {
+    const handleInputTouchStart = () => {
         setIsInputFocused(true);
     };
 
-    const handleInputBlur = () => {
+    const handleInputTouchEnd = () => {
         setIsInputFocused(false);
     };
 
@@ -57,8 +57,8 @@ const Home: React.FC = () => {
                         onChange={handleSearchInputChange}
                         placeholder="Search by movie name"
                         ref={inputRef}
-                        onClick={handleInputClick}
-                        onBlur={handleInputBlur}
+                        onTouchStart={handleInputTouchStart}
+                        onTouchEnd={handleInputTouchEnd}
                         className={isInputFocused ? 'focused' : ''}
                     />
                 </form>
