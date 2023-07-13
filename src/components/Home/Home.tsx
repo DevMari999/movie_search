@@ -42,14 +42,14 @@ const Home: React.FC = () => {
         <div className="home">
             <div className="input-container">
                 <form className="search">
-                    <a href="#" className="search-link">
+                    <button className="input-button">
                         <input
                             type="text"
                             value={searchQuery}
                             onChange={handleSearchInputChange}
                             placeholder="Search by movie name"
                         />
-                    </a>
+                    </button>
                 </form>
             </div>
 

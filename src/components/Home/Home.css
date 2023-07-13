@@ -32,7 +32,12 @@
     border: solid white 1px;
 }
 
-.search-link:hover, .search-link:active{
+.input-button {
+    background: transparent;
+    border: none;
+}
+
+.input-button:hover, .input-button:active{
     animation: wave 2.5s;
     border-radius: 30px;
 }
