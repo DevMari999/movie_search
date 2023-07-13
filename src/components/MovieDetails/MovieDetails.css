@@ -65,7 +65,7 @@ flex-direction: row;
 }
 
 .movie-details-content.dark-theme {
-    background-color: rgba(52, 48, 48, 0.35);
+    background-color: rgba(4, 4, 4, 0.58);
     box-shadow: 0 0px 2px rgba(141, 6, 6, 0.96);
 }
 
