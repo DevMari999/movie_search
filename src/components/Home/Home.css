@@ -62,6 +62,14 @@
         box-shadow: 0 0 0 80vw rgba(255, 235, 0, 0);
     }
 }
+.search input[type="text"].focused {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.85);
+    transition: box-shadow 0.3s ease;
+}
+
+.search input[type="text"].focused:hover {
+    box-shadow: 0 0 0 40vw rgba(255, 0, 0, 0.19);
+}
 
 
 .search-results {
