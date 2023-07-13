@@ -32,25 +32,9 @@
     border: solid white 1px;
 }
 
-/*.search input[type="text"]:hover {*/
-/*    animation: wave 2.5s;*/
-/*}*/
-/*@keyframes wave {*/
-/*    0% {*/
-/*        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.85);*/
-/*    }*/
-/*    30% {*/
-/*        box-shadow: 0 0 0 40vw rgba(255, 0, 0, 0.19);*/
-/*    }*/
-/*    100% {*/
-/*        box-shadow: 0 0 0 80vw rgba(255, 235, 0, 0);*/
-/*    }*/
-/*}*/
-
-.search input[type="text"].clicked {
+.search input[type="text"]:hover, .search-input[type="text"]:active {
     animation: wave 2.5s;
 }
-
 @keyframes wave {
     0% {
         box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.85);
@@ -62,15 +46,6 @@
         box-shadow: 0 0 0 80vw rgba(255, 235, 0, 0);
     }
 }
-.search input[type="text"].focused {
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.85);
-    transition: box-shadow 0.3s ease;
-}
-
-.search input[type="text"].focused:hover {
-    box-shadow: 0 0 0 40vw rgba(255, 0, 0, 0.19);
-}
-
 
 .search-results {
     margin-top: 10px;
