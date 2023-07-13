@@ -34,7 +34,14 @@
     border: solid white 1px;
 }
 
-.search input[type="text"]:focus {
+.search input[type="text"]:focus,
+.search input[type="text"]:focus,
+.search input[type="text"]:active,
+.search input[type="text"]:hover,
+.search input[type="text"]:active,
+.search input[type="text"]:hover,
+.search input[type="text"]::-webkit-input-placeholder:focus,
+.search input[type="text"]::-webkit-input-placeholder:hover {
     animation: wave 2.5s;
 }
 
