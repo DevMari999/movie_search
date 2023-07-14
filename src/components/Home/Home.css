@@ -1,5 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 .home {
-    /*background-image: url(../../assets/genresbackground.png);*/
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -8,14 +8,21 @@
     display: flex;
     height: 97vh;
     overflow: hidden;
-    justify-content: center;
-    background-color: rgba(21, 20, 20, 0.97);
+    justify-content: flex-end;
+    background-color: rgba(21, 20, 20, 0.94);
+    padding-bottom: 100px;
 }
 
 .home.light-theme {
     background-color: rgba(130, 127, 127, 0.92);
 }
 
+.header-home h1 {
+    color: rgba(255, 255, 255, 0.84);
+    font-size: 50px;
+    margin: 50px 50px 100px;
+    font-family: 'Bebas Neue', sans-serif;
+}
 .poster-img {
     position: fixed;
     top: 0;
@@ -27,21 +34,21 @@
     justify-content: center;
 }
 
-.poster-img img {
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    object-position: bottom;
-}
-
 .input-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    flex-direction: row;
+    margin-bottom: 30px;
+
 }
 .search {
     align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 .search input[type="text"] {
@@ -53,14 +60,19 @@
     width: 75vh;
     height: 43px;
     background: rgba(255, 255, 255, 0.95);
-    /*box-shadow: 0 0 5px white;*/
     border: solid white 1px;
-
 }
-
 
 .input-div {
     border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.knuckle img {
+    height: 120px;
 }
 
 .input-div:hover,
@@ -81,8 +93,6 @@
     }
 }
 
-
-
 .search-results {
     margin-top: 10px;
     margin-bottom: 5px;
@@ -102,15 +112,14 @@
     align-items: center;
     width: 80vh;
     flex-direction: row;
-    height: 400px;
+    height: fit-content;
 }
 
 .movie-poster2 {
-    height: 300px;
+    height: 270px;
     border-radius: 8px;
     box-shadow: 0 0px 5px rgba(230, 11, 11, 0.75);
     transition: transform 0.3s ease;
-    margin: 10px;
 }
 .movie-poster2.light-theme {
     box-shadow: 0 0px 5px rgba(22, 22, 22, 0.75);
@@ -137,4 +146,10 @@
         height: 40px;
     }
 
+}
+
+@media (min-width: 1800px) {
+    .movie-poster2 {
+        height: 500px;
+    }
 }

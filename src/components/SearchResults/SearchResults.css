@@ -1,17 +1,18 @@
 .search-results {
-    padding: 10px;
+    padding: 0px;
     border-radius: 8px;
-    width: 80%;
+    width: 60%;
+    max-width: 1500px;
 }
 
 .search-results div {
-    height: 330px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
     margin: 5px;
     width: 100%;
+    padding: 0px;
+
 }
 
 .slick-slider {
@@ -22,6 +23,7 @@
 .slick-list {
     width: 100%;
     overflow: hidden;
+
 }
 .slick-prev,
 .slick-next {
@@ -59,7 +61,7 @@
 
 
 .search-results.dark-theme {
-    background-color: rgba(0, 0, 0, 0.82);
+    background-color: rgba(0, 0, 0, 0.39);
 }
 
 .slick-prev,
@@ -74,7 +76,7 @@
 
 
 .search-results.light-theme {
-    background-color: rgba(219, 216, 215, 0.89);
+    background-color: rgba(219, 216, 215, 0.43);
 }
 
 

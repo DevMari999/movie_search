@@ -7,6 +7,8 @@ import { SearchResults } from '../../components';
 import { toggleTheme } from '../../redux/slices/themeSlice';
 import './Home.css';
 import poster from '../../assets/genresbackground.png';
+import knuckle from '../../assets/4.png';
+import knuckle2 from '../../assets/3.png';
 
 const Home: React.FC = () => {
     const dispatch = useDispatch();
@@ -49,9 +51,12 @@ const Home: React.FC = () => {
             <div className="background-img">
                 <img  src={poster}/>
             </div>
-
+               <div className="header-home">
+                   <h1>ALL YOUR FAVORITE MOVIES IN ONE PLACE</h1>
+               </div>
             <div className="input-container">
                 <form className="search">
+                    <div className="knuckle"><img src={knuckle}/></div>
                     <div className="input-div">
                         <input
                             type="text"
@@ -60,10 +65,12 @@ const Home: React.FC = () => {
                             placeholder="Search by movie name"
                         />
                     </div>
+                    <div className="knuckle"><img src={knuckle2}/></div>
                 </form>
             </div>
-            {searchQuery && <SearchResults />}
+            <SearchResults />
         </div>
+
     );
 };
 
