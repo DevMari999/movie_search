@@ -211,7 +211,7 @@
         min-height: fit-content;
     }
     .movie-poster2 {
-        height: 230px;
+        height: 250px;
     }
     .search input[type="text"] {
         width: 500px;
@@ -220,7 +220,7 @@
     .header-home h1 {
         margin-bottom: 20px;
         font-size: 50px;
-        margin-top: 100px;
+        margin-top: 50px;
 
     }
     .knuckle img {
