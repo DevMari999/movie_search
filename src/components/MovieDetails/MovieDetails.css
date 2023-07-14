@@ -64,6 +64,8 @@ flex-direction: row;
 
  .poster-container img {
   height: 65vh;
+
+     box-shadow: 0 0 2px white;
 }
 .header-description {
     margin: 20px;

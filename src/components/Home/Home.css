@@ -123,7 +123,7 @@
     height: 350px;
     border-radius: 8px;
     transition: transform 0.3s ease;
-    border: solid #350c0c 1px;
+    box-shadow: 0 0 2px white;
 }
 .movie-poster2.light-theme {
     box-shadow: 0 0px 5px rgba(22, 22, 22, 0.75);
