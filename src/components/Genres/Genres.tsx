@@ -54,7 +54,7 @@ const Genres: React.FC = () => {
 
          <div className="genre-buttons-container">
             {genres.map((genre: Genre) => (
-                <button className="general-button" key={genre.id} onClick={() => handleGenreClick(genre.id)}>
+                <button className="general-button mobile-button" key={genre.id} onClick={() => handleGenreClick(genre.id)}>
                     {genre.name}
                 </button>
             ))}

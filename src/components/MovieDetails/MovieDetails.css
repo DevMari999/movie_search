@@ -107,13 +107,16 @@ flex-direction: row;
         height: fit-content;
         padding-top: 80px;
         padding-bottom: 80px;
-
     }
 
     .movie-details-content {
         flex-direction: column;
         width: 90%;
         padding: 20px;
+    }
+
+    .poster-container {
+        margin: 0;
     }
 }
 @media (min-width: 480px) and (max-width: 768px) {
