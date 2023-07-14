@@ -57,10 +57,14 @@
 }
 
 
+.input-div {
+    border-radius: 30px;
+}
+
 .input-div:hover,
 .input-div:active {
     animation: wave 2s cubic-bezier(0.25, 0.1, 0.25, 1);
-    border-radius: 25%;
+    border-radius: 30px;
 }
 
 @keyframes wave {
