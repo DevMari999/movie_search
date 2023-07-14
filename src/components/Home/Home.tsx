@@ -48,9 +48,9 @@ const Home: React.FC = () => {
 
     return (
         <div className={`home ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
-            {/*<div className="background-img">*/}
-            {/*    <img  src={poster}/>*/}
-            {/*</div>*/}
+            <div className="background-img">
+                <img  src={poster}/>
+            </div>
                <div className="header-home">
                    <h1>ALL YOUR FAVORITE MOVIES IN ONE PLACE</h1>
                </div>

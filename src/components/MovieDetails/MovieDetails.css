@@ -81,12 +81,12 @@ flex-direction: row;
 }
 
 .movie-details.dark-theme {
-    background-color: rgba(21, 20, 20, 0.93);
+    background-color: rgba(8, 8, 8, 0.95);
   color: #fff;
 }
 
 .movie-details-content.dark-theme {
-    background-color: rgba(4, 4, 4, 0.58);
+    background-color: rgba(4, 4, 4, 0.41);
 }
 
 .movie-details.light-theme {
