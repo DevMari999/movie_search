@@ -245,6 +245,9 @@
     .input-container {
         margin: 0;
     }
+    .knuckle img {
+        height: 80px;
+    }
 }
 @media (min-width: 1800px) {
     .movie-poster2 {
