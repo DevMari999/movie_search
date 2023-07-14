@@ -1,5 +1,5 @@
 .home {
-    background-image: url(../../assets/poster3.png);
+    background-image: url(../../assets/poster1.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -9,7 +9,7 @@
     height: 97vh;
     overflow: hidden;
     justify-content: center;
-    background-color: rgba(21, 20, 20, 0.96);
+    background-color: rgba(21, 20, 20, 0.97);
 }
 
 .home.light-theme {
