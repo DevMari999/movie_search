@@ -6,10 +6,10 @@
     align-items: center;
     flex-direction: column;
     display: flex;
-    height: 100vh;
+    height: 97vh;
     overflow: hidden;
     justify-content: center;
-    background-color: rgba(21, 20, 20, 0.93);
+    background-color: rgba(21, 20, 20, 0.96);
 }
 
 .home.light-theme {
