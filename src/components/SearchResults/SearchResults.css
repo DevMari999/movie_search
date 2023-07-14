@@ -1,28 +1,46 @@
 .search-results {
     padding: 0px;
     border-radius: 8px;
-    width: 60%;
+    width: 80%;
     max-width: 1500px;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
 }
 
 .search-results div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     margin: 5px;
     width: 100%;
     padding: 0px;
 
 }
+.slick-track {
+    min-height: 300px;
+}
+.resultsDiv {
+    flex: 0 0 calc(25% - 10px);
+    margin: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .slick-slider {
     height: 100px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .slick-list {
     width: 100%;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 .slick-prev,
@@ -40,7 +58,13 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust the gap as needed */
+}
 .slick-prev:before,
 .slick-next:before {
     content: "";
@@ -66,12 +90,13 @@
 
 .slick-prev,
 .slick-next {
-    background-color: rgba(138, 34, 34, 0.63);
+    background-color: rgba(93, 12, 12, 0.84);
+    border-radius: 3px;
 }
 
 .slick-prev:hover,
 .slick-next:hover {
-    background-color: rgba(93, 12, 12, 0.84);
+    background: rgba(0, 0, 0, 0.88);
 }
 
 

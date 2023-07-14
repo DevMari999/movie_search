@@ -9,8 +9,14 @@
     height: 97vh;
     overflow: hidden;
     justify-content: flex-end;
-    background-color: rgba(21, 20, 20, 0.94);
+    background-color: rgba(8, 8, 8, 0.95);
     padding-bottom: 100px;
+}
+.popular {
+    color: white;
+    font-size: 22px;
+    font-family: Arial;
+
 }
 
 .home.light-theme {
@@ -21,7 +27,6 @@
     color: rgba(255, 255, 255, 0.84);
     font-size: 50px;
     font-family: 'Bebas Neue', sans-serif;
-
     margin-bottom: 100px;
 }
 .poster-img {
@@ -48,7 +53,6 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: row;
 }
 
@@ -117,9 +121,8 @@
 }
 
 .movie-poster2 {
-    height: 270px;
+    height: 350px;
     border-radius: 8px;
-    box-shadow: 0 0px 5px rgba(230, 11, 11, 0.75);
     transition: transform 0.3s ease;
 }
 .movie-poster2.light-theme {
@@ -134,23 +137,110 @@
 }
 
 @media (max-width: 480px) {
-
+  .home {
+      padding-bottom: 50px;
+      min-height: fit-content;
+  }
     .search input[type="text"] {
-        width: 320px;
+        width: 250px;
         height: 40px;
     }
 
+    .header-home h1 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        margin-top: 100px;
+
+    }
+    .knuckle img {
+        height: 80px;
+    }
+ .movie-poster2 {
+     height: 270px;
+ }
 }
 @media (min-width: 480px) and (max-width: 768px) {
     .search input[type="text"] {
-        width: 600px;
+        width: 350px;
         height: 40px;
     }
-
+    .header-home h1 {
+        margin-bottom: 20px;
+    }
+    .home {
+        min-height: fit-content;
+    }
+    .movie-poster2 {
+        height: 250px;
+    }
+    .header-home h1 {
+        margin-bottom: 50px;
+        font-size: 30px;
+        margin-top: 100px;
+    }
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+    .home {
+        min-height: fit-content;
+    }
+    .movie-poster2 {
+        height: 250px;
+    }
+    .search input[type="text"] {
+        width: 500px;
+        height: 40px;
+    }
+    .header-home h1 {
+        margin-bottom: 20px;
+        font-size: 30px;
+        margin-top: 100px;
+
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .home {
+        min-height: fit-content;
+    }
+    .movie-poster2 {
+        height: 250px;
+    }
+    .search input[type="text"] {
+        width: 500px;
+        height: 40px;
+    }
+    .header-home h1 {
+        margin-bottom: 20px;
+        font-size: 50px;
+        margin-top: 100px;
+
+    }
+}
+
+@media (min-width: 1441px )  and (max-width: 1799px){
+    .home {
+        min-height: fit-content;
+    }
+    .movie-poster2 {
+        height: 300px;
+    }
+    .search input[type="text"] {
+        width: 500px;
+        height: 40px;
+    }
+    .header-home h1 {
+        margin-bottom: 20px;
+        font-size: 45px;
+        margin-top: 100px;
+
+    }
+}
 @media (min-width: 1800px) {
     .movie-poster2 {
         height: 500px;
+    }
+    .header-home h1 {
+        margin-bottom: 20px;
     }
 }

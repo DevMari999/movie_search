@@ -48,9 +48,9 @@ const Home: React.FC = () => {
 
     return (
         <div className={`home ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
-            <div className="background-img">
-                <img  src={poster}/>
-            </div>
+            {/*<div className="background-img">*/}
+            {/*    <img  src={poster}/>*/}
+            {/*</div>*/}
                <div className="header-home">
                    <h1>ALL YOUR FAVORITE MOVIES IN ONE PLACE</h1>
                </div>
@@ -67,7 +67,8 @@ const Home: React.FC = () => {
                     </div>
                     <div className="knuckle"><img src={knuckle2}/></div>
                 </form>
-            </div>
+            </div >
+            <p className="popular">POPULAR</p>
             <SearchResults />
         </div>
 
