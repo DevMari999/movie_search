@@ -60,14 +60,20 @@
 .movie-card.light-theme .movie-poster {
   border: 1px solid #ddd;
 }
-@media (min-width: 480px) {
+@media (max-width: 480px) {
   .movie-card {
     margin: 20px;
+  }
+  .description-container h2 {
+    height: 50px;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
   .movie-card {
     min-height: 400px;
+  }
+  .description-container h2 {
+    height: 70px;
   }
 }
 
