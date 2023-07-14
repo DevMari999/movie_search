@@ -1,5 +1,5 @@
 .home {
-    background-image: url(../../assets/poster.jpg);
+    background-image: url(../../assets/poster3.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -9,7 +9,30 @@
     height: 100vh;
     overflow: hidden;
     justify-content: center;
+    background-color: rgba(0, 0, 0, 0.95);
 }
+
+.home.light-theme {
+    background-color: rgba(130, 127, 127, 0.92);
+}
+
+/*.poster-img {*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    z-index: -1;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*.poster-img img {*/
+/*    width: auto;*/
+/*    height: auto;*/
+/*    object-fit: contain;*/
+/*    object-position: bottom;*/
+/*}*/
 .input-container {
     display: flex;
     justify-content: center;
