@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux';
 import { setMovies, setCurrentPage } from '../../redux/slices';
 import { api } from '../../services';
-import { MovieCard, MoviesByGenre } from '../../components';
+import { MovieCard, Genres } from '../../components';
 import './MovieListing.css';
 
 const MovieListing: React.FC = () => {
@@ -39,6 +39,7 @@ const MovieListing: React.FC = () => {
 
     return (
         <div className={`movie-listing ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
+            <Genres />
             <div className="movie-listing-container">
                 {movies.map((movie) => (
                     <MovieCard key={movie.id} movie={movie} />

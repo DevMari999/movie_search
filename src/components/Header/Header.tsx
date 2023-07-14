@@ -76,15 +76,6 @@ const Header: React.FC = () => {
                 >
                     ALL MOVIES
                 </Link>
-                <Link
-                    to="/genres"
-                    className={`nav-link ${isHeaderVisible ? 'visible' : ''} ${
-                        isLightTheme ? 'light-theme' : 'dark-theme'
-                    }`}
-                    onClick={handleNavigation}
-                >
-                    BY GENRES
-                </Link>
             </div>
             <button
                 className={`themeToggle ${isLightTheme ? 'light-theme' : 'dark-theme'}`}
@@ -102,9 +93,6 @@ const Header: React.FC = () => {
                     </Link>
                     <Link to="/movie-listing" className="mobileMenuItem" onClick={handleNavigation}>
                         ALL MOVIES
-                    </Link>
-                    <Link to="/genres" className="mobileMenuItem" onClick={handleNavigation}>
-                        BY GENRES
                     </Link>
                 </div>
             )}

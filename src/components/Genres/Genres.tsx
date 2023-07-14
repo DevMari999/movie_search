@@ -48,9 +48,9 @@ const Genres: React.FC = () => {
 
     return (
         <div className={containerClassName}>
-            <div className="background-img">
-                <img src={background}/>
-            </div>
+            {/*<div className="background-img">*/}
+            {/*    <img src={background}/>*/}
+            {/*</div>*/}
 
          <div className="genre-buttons-container">
             {genres.map((genre: Genre) => (

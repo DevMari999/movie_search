@@ -6,7 +6,7 @@ import { api } from '../../services';
 import { SearchResults } from '../../components';
 import { toggleTheme } from '../../redux/slices/themeSlice';
 import './Home.css';
-import poster from '../../assets/poster2.png';
+import poster from '../../assets/genresbackground.png';
 
 const Home: React.FC = () => {
     const dispatch = useDispatch();
@@ -46,9 +46,9 @@ const Home: React.FC = () => {
 
     return (
         <div className={`home ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
-            {/*<div className="poster-img">*/}
-            {/*    <img  src={poster}/>*/}
-            {/*</div>*/}
+            <div className="background-img">
+                <img  src={poster}/>
+            </div>
 
             <div className="input-container">
                 <form className="search">

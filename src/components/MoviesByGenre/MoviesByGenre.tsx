@@ -4,7 +4,7 @@ import { fetchMoviesByGenre, FetchMoviesByGenrePayload } from "../../redux/slice
 import { RootState, AppDispatch } from '../../redux';
 import { Movie } from '../../types';
 import { useParams } from 'react-router-dom';
-import { MovieCard } from '../../components';
+import {Genres, MovieCard} from '../../components';
 import './MoviesByGenre.css';
 import '../../styles/common.css';
 
@@ -46,6 +46,7 @@ const MoviesByGenre: React.FC = () => {
 
     return (
         <div className={`movieByGenre ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
+            <Genres/>
             <div className="movieByGenre-container">
                 {movies.map((movie: Movie) => (
                     <MovieCard key={movie.id} movie={movie} />

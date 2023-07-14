@@ -2,7 +2,6 @@
     display: inline-block;
     padding: 5px 10px;
     margin: 10px;
-    background-color: #9c0000;
     color: white;
     font-weight: bold;
     text-transform: uppercase;
@@ -51,6 +50,7 @@
     background-color: rgb(202, 193, 193);
     color: #333333;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: solid black 1px;
 }
 
 .light-theme .general-button:hover {
@@ -59,13 +59,13 @@
 }
 
 .dark-theme .general-button {
-    background-color: rgba(219, 12, 12, 0.76);
+    background-color: rgba(198, 20, 20, 0.62);
     color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .dark-theme .general-button:hover {
-    background-color: rgba(190, 6, 6, 0.74);
+    background-color: rgba(146, 17, 17, 0.74);
     animation: shine 1s linear infinite;
 
 }
