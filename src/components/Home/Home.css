@@ -20,8 +20,9 @@
 .header-home h1 {
     color: rgba(255, 255, 255, 0.84);
     font-size: 50px;
-    margin: 50px 50px 100px;
     font-family: 'Bebas Neue', sans-serif;
+
+    margin-bottom: 100px;
 }
 .poster-img {
     position: fixed;
