@@ -14,7 +14,7 @@
 }
 .popular {
     color: white;
-    font-size: 22px;
+    font-size: 18px;
     font-family: Arial;
 
 }
@@ -27,7 +27,7 @@
     color: rgba(255, 255, 255, 0.84);
     font-size: 50px;
     font-family: 'Bebas Neue', sans-serif;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 }
 .poster-img {
     position: fixed;
@@ -76,7 +76,7 @@
 }
 
 .knuckle img {
-    height: 120px;
+    height: 100px;
 }
 
 .input-div:hover,
@@ -148,7 +148,7 @@
 
     .header-home h1 {
         margin-bottom: 20px;
-        font-size: 24px;
+        font-size: 22px;
         margin-top: 50px;
 
     }

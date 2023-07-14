@@ -16,7 +16,7 @@
 
 }
 .slick-track {
-    min-height: 300px;
+    min-height: 250px;
 }
 .resultsDiv {
     flex: 0 0 calc(25% - 10px);
