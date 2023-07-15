@@ -35,9 +35,12 @@
     width: 32px;
 }
 .not-found {
-    min-height: 250px;
     color: white;
     min-width: 50vh;
+}
+.not-found-2 {
+    height: 300px;
+    margin: 5px;
 }
 
 .search-results.dark-theme {

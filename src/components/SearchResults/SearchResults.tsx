@@ -106,7 +106,7 @@ const SearchResults: React.FC = () => {
                         </div>
                     ))
                 ) : (
-                    <div className="not-found">No results found.</div>
+                    <div className="not-found"><div className="not-found-2">No results found.</div></div>
                 )}
             </div>
         </div>
