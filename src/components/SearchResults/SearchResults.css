@@ -35,6 +35,7 @@
 .not-found {
     min-height: 300px;
     color: white;
+    width: 70%;
 }
 
 .search-results.dark-theme {
