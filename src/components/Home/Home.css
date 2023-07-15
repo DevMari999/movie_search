@@ -75,15 +75,46 @@
     align-items: center;
     flex-direction: row;
 }
-
-.knuckle img {
+.knuckle1 img {
     height: 100px;
+    opacity: 0; /* Set initial opacity to 0 */
+    animation: slideLeft 2s ease-in-out 2s forwards;
+    animation-delay: 200ms;
 }
 
-.input-div:hover,
-.input-div:active {
-    animation: wave 2s cubic-bezier(0.25, 0.1, 0.25, 1);
+.knuckle2 img {
+    height: 100px;
+    opacity: 0; /* Set initial opacity to 0 */
+    animation: slideRight 2s ease-in-out 2s forwards;
+    animation-delay: 200ms;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+.input-div {
+    animation: wave 2s cubic-bezier(0.25, 0.1, 0.25, 1) 2s forwards;
     border-radius: 30px;
+    animation-delay: 2200ms;
 }
 
 @keyframes wave {
@@ -97,6 +128,8 @@
         box-shadow: 0 0 0 60vw rgba(255, 235, 0, 0);
     }
 }
+
+
 
 .search-results {
     margin-top: 10px;
@@ -153,11 +186,15 @@
         margin-top: 50px;
 
     }
-    .knuckle img {
+    .knuckle1 img {
+        height: 80px;
+    }
+
+    .knuckle2 img {
         height: 80px;
     }
  .movie-poster2 {
-     height: 270px;
+     height: 290px;
  }
 
 }

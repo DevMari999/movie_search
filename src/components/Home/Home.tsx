@@ -15,10 +15,6 @@ const Home: React.FC = () => {
     const searchQuery = useSelector((state: RootState) => state.home.searchQuery);
     const isLightTheme = useSelector((state: RootState) => state.theme.isLightTheme);
 
-    const handleSearchInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        dispatch(setSearchQuery(e.target.value));
-    };
-
     const handleThemeToggle = () => {
         dispatch(toggleTheme());
     };
@@ -56,16 +52,15 @@ const Home: React.FC = () => {
                </div>
             <div className="input-container">
                 <form className="search">
-                    <div className="knuckle"><img src={knuckle}/></div>
+                    <div className="knuckle1"><img src={knuckle}/></div>
                     <div className="input-div">
                         <input
                             type="text"
                             value={searchQuery}
-                            onChange={handleSearchInputChange}
                             placeholder="Search by movie name"
                         />
                     </div>
-                    <div className="knuckle"><img src={knuckle2}/></div>
+                    <div className="knuckle2"><img src={knuckle2}/></div>
                 </form>
             </div >
             <p className="popular">POPULAR</p>

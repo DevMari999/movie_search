@@ -59,11 +59,7 @@
 .movie-card.light-theme .movie-poster {
   border: 1px solid #ddd;
 }
-@media (max-width: 480px) {
-  .movie-card {
-    margin: 20px;
-  }
-}
+
 @media (min-width: 480px) and (max-width: 768px) {
   .movie-card {
     min-height: 400px;
