@@ -92,7 +92,7 @@ flex-direction: row;
 }
 
 .movie-details.light-theme {
-    background-color: rgba(130, 127, 127, 0.84);
+    background-color: rgba(130, 127, 127, 0.79);
     color: rgba(17, 17, 17, 0.88)
 }
 
