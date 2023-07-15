@@ -58,7 +58,7 @@
 
 .search input[type="text"] {
     padding: 10px;
-    border-radius: 30px;
+    border-radius: 10px;
     font-size: 18px;
     font-family: Arial;
     outline: none;
@@ -69,7 +69,7 @@
 }
 
 .input-div {
-    border-radius: 30px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,16 +77,16 @@
 }
 .knuckle1 img {
     height: 100px;
-    opacity: 0; /* Set initial opacity to 0 */
+    opacity: 0;
     animation: slideLeft 2s ease-in-out 2s forwards;
-    animation-delay: 200ms;
+    animation-delay: 50ms;
 }
 
 .knuckle2 img {
     height: 100px;
-    opacity: 0; /* Set initial opacity to 0 */
+    opacity: 0;
     animation: slideRight 2s ease-in-out 2s forwards;
-    animation-delay: 200ms;
+    animation-delay: 50ms;
 }
 
 @keyframes slideLeft {
@@ -113,8 +113,8 @@
 
 .input-div {
     animation: wave 2s cubic-bezier(0.25, 0.1, 0.25, 1) 2s forwards;
-    border-radius: 30px;
-    animation-delay: 2200ms;
+    border-radius: 10px;
+    animation-delay: 2050ms;
 }
 
 @keyframes wave {
