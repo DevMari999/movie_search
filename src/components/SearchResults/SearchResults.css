@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    width: 85%;
 }
 .search-results {
     border-radius: 8px;
@@ -16,6 +17,7 @@
     flex-direction: row;
     height: fit-content;
     flex-wrap: wrap;
+    width: 100%;
 }
 .search-results div {
     margin: 5px;
