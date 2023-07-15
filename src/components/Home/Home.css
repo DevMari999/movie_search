@@ -78,14 +78,14 @@
     height: 100px;
     opacity: 0;
     animation: slideLeft 2s ease-in-out 2s forwards;
-    animation-delay: 50ms;
+    animation-delay: 1ms;
 }
 
 .knuckle2 img {
     height: 100px;
     opacity: 0;
     animation: slideRight 2s ease-in-out 2s forwards;
-    animation-delay: 50ms;
+    animation-delay: 1ms;
 }
 
 @keyframes slideLeft {
@@ -113,7 +113,7 @@
 .input-div {
     animation: wave 2s cubic-bezier(0.25, 0.1, 0.25, 1) 2s forwards;
     border-radius: 10px;
-    animation-delay: 2050ms;
+    animation-delay: 2001ms;
 }
 
 @keyframes wave {
