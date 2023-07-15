@@ -6,7 +6,7 @@
 }
 .search-results {
     border-radius: 8px;
-    width: 75%;
+    width: 80vh;
     min-width: fit-content;
     padding: 7px;
     max-width: 1500px;
