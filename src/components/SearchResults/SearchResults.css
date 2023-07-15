@@ -6,7 +6,7 @@
 }
 .search-results {
     border-radius: 8px;
-    width: 70%;
+    width: 75%;
     min-width: fit-content;
     padding: 7px;
     max-width: 1500px;
@@ -33,9 +33,9 @@
     width: 32px;
 }
 .not-found {
-    min-height: 300px;
+    min-height: 250px;
     color: white;
-    width: 70%;
+    min-width: 50vh;
 }
 
 .search-results.dark-theme {
