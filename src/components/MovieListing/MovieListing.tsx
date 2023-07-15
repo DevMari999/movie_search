@@ -27,13 +27,13 @@ const MovieListing: React.FC = () => {
 
     const goToNextPage = () => {
         dispatch(setCurrentPage(currentPage + 1));
-        window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     const goToPreviousPage = () => {
         if (currentPage > 1) {
             dispatch(setCurrentPage(currentPage - 1));
-            window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     };
 

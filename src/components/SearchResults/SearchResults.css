@@ -13,8 +13,13 @@
     width: 100%;
     padding: 0px;
 }
+
+.not-found {
+    min-height: 300px;
+    color: white;
+}
 .slick-track {
-    min-height: 250px;
+    min-height: 300px;
 }
 .resultsDiv {
     flex: 0 0 calc(25% - 10px);

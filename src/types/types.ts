@@ -14,7 +14,7 @@ export interface Genre {
     name: string;
 }
 
-export interface HomeState {
-    searchResults: Movie[];
-    allSearchResults: Movie[];
-}
+// export interface HomeState {
+//     searchResults: Movie[];
+//
+// }
