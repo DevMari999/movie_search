@@ -10,14 +10,14 @@
     overflow: hidden;
     justify-content: center;
     background-color: rgba(8, 8, 8, 0.91);
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     padding-top: 70px;
 }
 .popular {
     color: white;
     font-size: 18px;
     font-family: Arial;
-
+    margin: 10px;
 }
 
 .home.light-theme {
@@ -47,7 +47,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-
 }
 .search {
     align-items: center;
@@ -129,33 +128,9 @@
     }
 }
 
-
-
-.search-results {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.search-results div {
-    padding: 10px;
-    margin: 10px;
-    border-radius: 8px;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80vh;
-    flex-direction: row;
-    height: fit-content;
-}
-
 .movie-poster2 {
     height: 350px;
-    border-radius: 8px;
+    border-radius: 2px;
     transition: transform 0.3s ease;
     box-shadow: 0 0 2px white;
 }

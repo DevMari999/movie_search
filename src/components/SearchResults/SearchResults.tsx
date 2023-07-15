@@ -4,9 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { RootState } from '../../redux';
 import { fetchMovieDetails, setSearchResults } from '../../redux/slices';
 import { api } from '../../services';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import './SearchResults.css';
 
 const SearchResults: React.FC = () => {
@@ -14,7 +11,8 @@ const SearchResults: React.FC = () => {
     const isLightTheme = useSelector((state: RootState) => state.theme.isLightTheme);
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const [slidesToShow, setSlidesToShow] = useState(4);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [itemsPerPage, setItemsPerPage] = useState(4);
 
     useEffect(() => {
         const fetchPopularMovies = async () => {
@@ -45,53 +43,60 @@ const SearchResults: React.FC = () => {
         }
     }, [dispatch, searchQuery]);
 
-
-    useEffect(() => {
-        const updateSlidesToShow = () => {
-            const screenWidth = window.innerWidth;
-            if (screenWidth >= 1200) {
-                setSlidesToShow(4);
-            } else if (screenWidth >= 992) {
-                setSlidesToShow(3);
-            } else if (screenWidth >= 768) {
-                setSlidesToShow(3);
-            } else if (screenWidth >= 458) {
-                setSlidesToShow(2);
-            } else {
-                setSlidesToShow(1);
-            }
-        };
-
-        updateSlidesToShow();
-        window.addEventListener('resize', updateSlidesToShow);
-
-        return () => {
-            window.removeEventListener('resize', updateSlidesToShow);
-        };
-    }, []);
-
     const searchResults = useSelector((state: RootState) => state.home.searchResults);
 
-    const sliderSettings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: slidesToShow,
-        slidesToScroll: slidesToShow,
+    const prevSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex === 0 ? Math.ceil(searchResults.length / itemsPerPage) - 1 : prevIndex - 1));
     };
 
-    const sliderClassName = `slider ${isLightTheme ? 'light-theme' : 'dark-theme'}`;
+    const nextSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex === Math.ceil(searchResults.length / itemsPerPage) - 1 ? 0 : prevIndex + 1));
+    };
 
     const handleMovieClick = (movieId: string) => {
         dispatch(fetchMovieDetails(movieId) as any);
         navigate(`/movie-details/${movieId}`);
     };
 
+    useEffect(() => {
+        const updateItemsPerPage = () => {
+            const screenWidth = window.innerWidth;
+            if (screenWidth >= 1200) {
+                setItemsPerPage(4);
+            } else if (screenWidth >= 992) {
+                setItemsPerPage(4);
+            } else if (screenWidth >= 768) {
+                setItemsPerPage(3);
+            } else if (screenWidth >= 450) {
+                    setItemsPerPage(2);
+            } else {
+                setItemsPerPage(1);
+            }
+        };
+
+        updateItemsPerPage();
+        window.addEventListener('resize', updateItemsPerPage);
+
+        return () => {
+            window.removeEventListener('resize', updateItemsPerPage);
+        };
+    }, []);
+
+    const start = currentIndex * itemsPerPage;
+    const end = start + itemsPerPage;
+    const displayedMovies = searchResults.slice(start, end);
+
     return (
+        <div className="wrapper">
+            <div className="pagination">
+                <button  className="general-button pagination-button" onClick={prevSlide}>
+                    &lt;
+                </button>
+            </div>
         <div className={`search-results ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
-            {searchResults.length > 0 ? (
-                <Slider {...sliderSettings} className={sliderClassName}>
-                    {searchResults.map((movie: any) => (
+            <div className="slide-container">
+                {displayedMovies.length > 0 ? (
+                    displayedMovies.map((movie: any) => (
                         <div className="resultsDiv" key={movie.id} onClick={() => handleMovieClick(movie.id)}>
                             <img
                                 className={`movie-poster2 ${isLightTheme ? 'light-theme' : 'dark-theme'}`}
@@ -99,16 +104,24 @@ const SearchResults: React.FC = () => {
                                 alt={movie.title}
                             />
                         </div>
-                    ))}
-                </Slider>
-            ) : (
-                <div className="not-found">No results found.</div>
-            )}
+                    ))
+                ) : (
+                    <div className="not-found">No results found.</div>
+                )}
+            </div>
+        </div>
+            <div className="pagination">
+                <button className="general-button pagination-button" onClick={nextSlide}>
+                    &gt;
+                </button>
+            </div>
         </div>
     );
 };
 
 export default SearchResults;
+
+
 
 
 
