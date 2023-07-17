@@ -73,7 +73,7 @@
 /*MOVIE CARDS*/
 @media (max-width: 480px) {
     .movie-card {
-        width: calc(77% - 10px);
+        width: calc(80% - 10px);
     }
 }
 @media (min-width: 480px) and (max-width: 768px) {
