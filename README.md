@@ -1,7 +1,7 @@
 ![screen6](https://github.com/DevMari999/movie_search/assets/135366781/dd5affbb-2ebe-4cbb-aa0f-df05dea52d0a)
 
-Movie Website
-Tech Stack:
+<b>Movie Website</b>
+<b>Tech Stack:</b>
 
     Front-End: React, TypeScript
     IDE: IntelliJ
