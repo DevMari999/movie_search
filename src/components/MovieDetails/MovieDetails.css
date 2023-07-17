@@ -35,7 +35,7 @@ flex-direction: row;
   flex-wrap: wrap;
   flex-direction: column;
     max-width: 800px;
- margin: 20px;
+   margin: 20px;
 }
 .background-img {
     position: fixed;
@@ -64,7 +64,6 @@ flex-direction: row;
 
  .poster-container img {
   height: 65vh;
-
      box-shadow: 0 0 2px white;
 }
 .header-description {
@@ -118,6 +117,18 @@ flex-direction: row;
     .poster-container {
         margin: 0;
     }
+    .movie-details h1 {
+        font-size: 23px;
+        margin-bottom: 5px;
+    }
+
+    .movie-details p {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .poster-container img {
+        height: 55vh;
+    }
 }
 @media (min-width: 480px) and (max-width: 768px) {
     .movie-details {
@@ -128,10 +139,14 @@ flex-direction: row;
     }
 
     .movie-details-content {
-        /*flex-direction: column;*/
+        flex-direction: column;
         width: 90%;
         padding: 20px;
     }
+    .poster-container img {
+        height: 50vh;
+    }
+
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -146,9 +161,11 @@ flex-direction: row;
      }
 
     .movie-details-content {
-        /*flex-direction: column;*/
         width: 90%;
         padding: 20px;
+    }
+    .poster-container img {
+        height: 50vh;
     }
 }
 
