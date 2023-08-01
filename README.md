@@ -1,4 +1,5 @@
-![screen6](https://github.com/DevMari999/movie_search/assets/135366781/dd5affbb-2ebe-4cbb-aa0f-df05dea52d0a)
+
+![movieshome](https://github.com/DevMari999/movie_search/assets/135366781/082e4669-d3be-4584-bee1-b804f4115711)
 
 <b>Movie Website</b>
 <b>Tech Stack:</b>
