@@ -5,13 +5,14 @@
     color: white;
     font-weight: bold;
     text-transform: uppercase;
-    border-radius: 3px;
+    /*border-radius: 5px;*/
     cursor: pointer;
     position: relative;
     overflow: hidden;
     height: 35px;
     font-size: 15px;
     border: solid white 1px;
+
 }
 
 .general-button::before {

@@ -62,7 +62,7 @@ const SearchResults: React.FC = () => {
         const updateItemsPerPage = () => {
             const screenWidth = window.innerWidth;
             if (screenWidth >= 1200) {
-                setItemsPerPage(4);
+                setItemsPerPage(5);
             } else if (screenWidth >= 992) {
                 setItemsPerPage(4);
             } else if (screenWidth >= 768) {
