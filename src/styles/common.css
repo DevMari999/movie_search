@@ -5,7 +5,7 @@
     color: white;
     font-weight: bold;
     text-transform: uppercase;
-    /*border-radius: 5px;*/
+    border-radius: 2px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -82,19 +82,20 @@
         width: 100%;
     }
     .movie-card {
-        width: calc(30% - 5px);
+        width: calc(32% - 5px);
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .movie-card {
-        width: calc(22% - 5px);
+        width: calc(18% - 5px);
     }
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
     .movie-card {
-        width: calc(20% - 5px);
+        width: calc(15% - 5px);
+        min-height: 450px;
     }
 }
 

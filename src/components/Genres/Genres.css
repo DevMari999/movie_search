@@ -1,13 +1,11 @@
 .genres {
     display: flex;
     flex-wrap: wrap;
-    /*height:200px;*/
     align-content: center;
     justify-content: center;
-    /*background-color: rgba(21, 20, 20, 0.93);*/
     width: 100%;
     height: fit-content;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 .genre-buttons-container {

@@ -27,7 +27,7 @@
 .description-container h2 {
   font-size: 18px;
   margin: 7px;
-  height: 30px;
+ height: 55px;
   text-align: center;
 }
 
@@ -62,7 +62,7 @@
 
 @media (min-width: 480px) and (max-width: 768px) {
   .movie-card {
-    min-height: 400px;
+    min-height: 300px;
   }
   .description-container h2 {
     height: 70px;
@@ -71,7 +71,7 @@
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .movie-card {
-    min-height: 480px;
+    min-height:350px;
   }
 }
 
