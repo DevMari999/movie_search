@@ -1,4 +1,6 @@
-![screen6](https://github.com/DevMari999/movie_search/assets/135366781/dd5affbb-2ebe-4cbb-aa0f-df05dea52d0a)
+
+![Screenshot 2023-08-01 at 04 42 39](https://github.com/DevMari999/movie_search/assets/135366781/d374cff3-e384-4a1c-98c7-7de71237097b)
+
 
 <b>Movie Website</b>
 <b>Tech Stack:</b>
