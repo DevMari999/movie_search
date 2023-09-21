@@ -10,9 +10,9 @@
     height: calc(100vh - 50px);
     overflow: hidden;
     justify-content: center;
-    background-color: rgba(8, 8, 8, 0.89);
+    background-color: rgba(8, 8, 8, 0.91);
     padding-bottom: 30px;
-    padding-top: 130px;
+    padding-top: 77px;
 }
 
 .popular {
