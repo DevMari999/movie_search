@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 interface HomeState {
     searchQuery: string;
@@ -23,6 +23,6 @@ const homeSlice = createSlice({
     },
 });
 
-export const { setSearchQuery, setSearchResults } = homeSlice.actions;
+export const {setSearchQuery, setSearchResults} = homeSlice.actions;
 
 export default homeSlice.reducer;

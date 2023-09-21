@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .home {
     background-size: cover;
     background-position: center;
@@ -9,14 +10,14 @@
     height: calc(100vh - 50px);
     overflow: hidden;
     justify-content: center;
-    background-color: rgba(8, 8, 8, 0.91);
+    background-color: rgba(8, 8, 8, 0.89);
     padding-bottom: 30px;
-    padding-top: 70px;
+    padding-top: 130px;
 }
+
 .popular {
     color: white;
     font-size: 18px;
-    font-family: Arial;
     margin: 10px;
 }
 
@@ -30,6 +31,7 @@
     font-family: 'Bebas Neue', sans-serif;
     margin-bottom: 70px;
 }
+
 .poster-img {
     position: fixed;
     top: 0;
@@ -48,6 +50,7 @@
     align-items: center;
     flex-direction: row;
 }
+
 .search {
     align-items: center;
     display: flex;
@@ -59,7 +62,6 @@
     padding: 10px;
     border-radius: 10px;
     font-size: 18px;
-    font-family: Arial;
     outline: none;
     width: 75vh;
     height: 43px;
@@ -74,15 +76,16 @@
     align-items: center;
     flex-direction: row;
 }
+
 .knuckle1 img {
-    height: 100px;
+    height: 90px;
     opacity: 0;
     animation: slideLeft 2s ease-in-out 2s forwards;
     animation-delay: 1ms;
 }
 
 .knuckle2 img {
-    height: 100px;
+    height: 90px;
     opacity: 0;
     animation: slideRight 2s ease-in-out 2s forwards;
     animation-delay: 1ms;
@@ -138,9 +141,11 @@
     box-shadow: 0 0 2px white;
     margin: 5px;
 }
+
 .movie-poster2.light-theme {
-    box-shadow: 0 0px 5px rgba(22, 22, 22, 0.75);
+    box-shadow: 0 0 5px rgba(22, 22, 22, 0.75);
 }
+
 .movie-poster2:hover {
     transform: scale(1.05);
 }
@@ -150,10 +155,11 @@
 }
 
 @media (max-width: 480px) {
-  .home {
-      padding-bottom: 50px;
-      min-height: fit-content;
-  }
+    .home {
+        padding-bottom: 50px;
+        min-height: fit-content;
+    }
+
     .search input[type="text"] {
         width: 250px;
         height: 40px;
@@ -165,6 +171,7 @@
         margin-top: 50px;
 
     }
+
     .knuckle1 img {
         height: 80px;
     }
@@ -172,25 +179,31 @@
     .knuckle2 img {
         height: 80px;
     }
- .movie-poster2 {
-     height: 290px;
- }
+
+    .movie-poster2 {
+        height: 290px;
+    }
 
 }
+
 @media (min-width: 480px) and (max-width: 768px) {
     .search input[type="text"] {
         width: 350px;
         height: 40px;
     }
+
     .header-home h1 {
         margin-bottom: 20px;
     }
+
     .home {
         min-height: fit-content;
     }
+
     .movie-poster2 {
         height: 250px;
     }
+
     .header-home h1 {
         margin-bottom: 50px;
         font-size: 30px;
@@ -203,13 +216,16 @@
     .home {
         min-height: fit-content;
     }
+
     .movie-poster2 {
         height: 250px;
     }
+
     .search input[type="text"] {
         width: 500px;
         height: 40px;
     }
+
     .header-home h1 {
         margin-bottom: 20px;
         font-size: 30px;
@@ -226,49 +242,60 @@
     .home {
         min-height: fit-content;
     }
+
     .movie-poster2 {
         height: 250px;
     }
+
     .search input[type="text"] {
         width: 500px;
         height: 40px;
     }
+
     .header-home h1 {
         margin-bottom: 20px;
         font-size: 50px;
     }
+
     .knuckle img {
         height: 80px;
     }
 }
 
-@media (min-width: 1441px )  and (max-width: 1799px){
+@media (min-width: 1441px )  and (max-width: 1799px) {
     .home {
         min-height: fit-content;
     }
+
     .movie-poster2 {
         height: 300px;
     }
+
     .search input[type="text"] {
         width: 500px;
         height: 40px;
     }
+
     .header-home h1 {
         margin-bottom: 20px;
         font-size: 45px;
         margin-top: 70px;
     }
+
     .input-container {
         margin: 0;
     }
+
     .knuckle img {
         height: 80px;
     }
 }
+
 @media (min-width: 1800px) {
     .movie-poster2 {
         height: 500px;
     }
+
     .header-home h1 {
         margin-bottom: 20px;
     }

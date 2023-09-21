@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {Movie} from "../../types";
 
 interface MovieListingState {
@@ -29,6 +29,6 @@ const movieListingSlice = createSlice({
     },
 });
 
-export const { setMovies, setCurrentPage, setSelectedMovie } = movieListingSlice.actions;
+export const {setMovies, setCurrentPage, setSelectedMovie} = movieListingSlice.actions;
 
 export default movieListingSlice.reducer;

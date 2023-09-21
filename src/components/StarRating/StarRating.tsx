@@ -5,11 +5,11 @@ interface StarRatingProps {
     value: number;
 }
 
-const StarRating: React.FC<StarRatingProps> = ({ value }) => {
+const StarRating: React.FC<StarRatingProps> = ({value}) => {
     const starRatingConfig = {
-        size: 18, // Adjust the size to make the stars smaller
-        activeColor: '#c00e0e', // Set the color of the active stars to white
-        color: '#ffffff', // Set the color of the inactive stars to white
+        size: 18,
+        activeColor: '#c00e0e',
+        color: '#ffffff',
         edit: false,
     };
 

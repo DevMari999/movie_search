@@ -1,40 +1,40 @@
 .movie-listing {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: column;
-  background-color: rgba(4, 4, 4, 0.93);
-  min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(4, 4, 4, 0.93);
+    min-height: 100vh;
 }
 
 .movie-listing-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 10px;
-  margin-bottom:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 .movie-listing.light-theme {
-  background-color: rgb(226, 223, 223);
+    background-color: rgb(226, 223, 223);
 }
 
 .movie-listing h2 {
-  font-size: 18px;
-  margin-bottom: 8px;
+    font-size: 18px;
+    margin-bottom: 8px;
 }
 
 .movie-listing p {
-  margin-bottom: 4px;
+    margin-bottom: 4px;
 }
 
 .movie-listing .pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
 }
 

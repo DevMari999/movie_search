@@ -1,13 +1,13 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 import api from "../../services/api";
-import { Movie, Genre } from "../../types";
+import {Movie, Genre} from "../../types";
 
 export interface MoviesState {
     data: Movie[];
     currentPage: number;
     totalPages: number;
     length: number;
-    genres: Genre[]; // Add genres property
+    genres: Genre[];
 }
 
 export interface FetchMoviesByGenrePayload {
@@ -17,7 +17,7 @@ export interface FetchMoviesByGenrePayload {
 
 export const fetchMoviesByGenre = createAsyncThunk(
     'movies/fetchMoviesByGenre',
-    async ({ genreId, page }: FetchMoviesByGenrePayload) => {
+    async ({genreId, page}: FetchMoviesByGenrePayload) => {
         const response = await api.get(`/discover/movie`, {
             params: {
                 with_genres: genreId,

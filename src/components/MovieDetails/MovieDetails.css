@@ -1,42 +1,45 @@
 .movie-details {
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     overflow: hidden;
 }
 
 .movie-details-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-    margin:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 20px;
     border-radius: 8px;
     width: 80%;
     max-width: 1200px;
 
 }
+
 .description-button-container {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-wrap: wrap;
-flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
     margin: 10px;
 }
+
 .description {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
     max-width: 800px;
-   margin: 20px;
+    margin: 20px;
 }
+
 .background-img {
     position: fixed;
     top: 0;
@@ -57,33 +60,35 @@ flex-direction: row;
     object-fit: contain;
     object-position: bottom;
 }
- .poster-container {
-  margin-right: 20px;
-  width: fit-content;
+
+.poster-container {
+    margin-right: 20px;
+    width: fit-content;
 }
 
- .poster-container img {
-  height: 65vh;
-     box-shadow: 0 0 2px white;
+.poster-container img {
+    height: 65vh;
+    box-shadow: 0 0 2px white;
 }
+
 .header-description {
     margin: 20px;
     height: fit-content;
 }
+
 .movie-details h1 {
-  font-size: 30px;
-  margin-bottom: 10px;
+    font-size: 30px;
+    margin-bottom: 10px;
 }
 
 .movie-details p {
-  font-size: 20px;
-  margin-bottom: 10px;
-
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .movie-details.dark-theme {
-    background-color: rgba(8, 8, 8, 0.91);
-  color: #fff;
+    background-color: rgba(8, 8, 8, 0.89);
+    color: #fff;
 }
 
 .movie-details-content.dark-theme {
@@ -117,6 +122,7 @@ flex-direction: row;
     .poster-container {
         margin: 0;
     }
+
     .movie-details h1 {
         font-size: 23px;
         margin-bottom: 5px;
@@ -126,10 +132,12 @@ flex-direction: row;
         font-size: 18px;
         margin-bottom: 5px;
     }
+
     .poster-container img {
         height: 55vh;
     }
 }
+
 @media (min-width: 480px) and (max-width: 768px) {
     .movie-details {
         min-height: fit-content;
@@ -143,6 +151,7 @@ flex-direction: row;
         width: 90%;
         padding: 20px;
     }
+
     .poster-container img {
         height: 50vh;
     }
@@ -156,14 +165,16 @@ flex-direction: row;
         padding-bottom: 80px;
 
     }
+
     .description {
-         min-height: 500px;
-     }
+        min-height: 500px;
+    }
 
     .movie-details-content {
         width: 90%;
         padding: 20px;
     }
+
     .poster-container img {
         height: 50vh;
     }

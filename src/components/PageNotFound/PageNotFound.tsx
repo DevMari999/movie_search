@@ -1,4 +1,3 @@
-
 import './PageNotFound.css';
 
 const PageNotFound: React.FC = () => {

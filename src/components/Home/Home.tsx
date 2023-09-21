@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { setSearchQuery, setSearchResults } from '../../redux/slices';
-import { RootState } from '../../redux';
-import { api } from '../../services';
-import { SearchResults } from '../../components';
-import { toggleTheme } from '../../redux/slices/themeSlice';
+import React, {useState, useEffect} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {setSearchQuery, setSearchResults} from '../../redux/slices';
+import {RootState} from '../../redux';
+import {api} from '../../services';
+import {SearchResults} from '../../components';
+import {toggleTheme} from '../../redux/slices/themeSlice';
 import './Home.css';
 import poster from '../../assets/genresbackground.png';
 import knuckle from '../../assets/4.png';
@@ -49,11 +49,11 @@ const Home: React.FC = () => {
     return (
         <div className={`home ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
             <div className="background-img">
-                <img  src={poster}/>
+                <img src={poster}/>
             </div>
-               <div className="header-home">
-                   <h1>ALL YOUR FAVORITE MOVIES IN ONE PLACE</h1>
-               </div>
+            <div className="header-home">
+                <h1>ALL YOUR FAVORITE MOVIES IN ONE PLACE</h1>
+            </div>
             <div className="input-container">
                 <form className="search">
                     <div className="knuckle1"><img src={knuckle}/></div>
@@ -67,9 +67,9 @@ const Home: React.FC = () => {
                     </div>
                     <div className="knuckle2"><img src={knuckle2}/></div>
                 </form>
-            </div >
+            </div>
             <p className="popular">POPULAR</p>
-            <SearchResults />
+            <SearchResults/>
         </div>
 
     );

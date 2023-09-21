@@ -1,18 +1,18 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { Movie } from '../../types';
-import { StarRating } from '../../components';
+import {useNavigate} from 'react-router-dom';
+import {useSelector} from 'react-redux';
+import {Movie} from '../../types';
+import {StarRating} from '../../components';
 import './MovieCard.css';
-import { posterBaseUrl } from '../../constants';
-import { RootState } from '../../redux';
+import {posterBaseUrl} from '../../constants';
+import {RootState} from '../../redux';
 import '../../styles/common.css';
 
 interface MovieCardProps {
     movie: Movie;
 }
 
-const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
+const MovieCard: React.FC<MovieCardProps> = ({movie}) => {
     const navigate = useNavigate();
     const isLightTheme = useSelector((state: RootState) => state.theme.isLightTheme);
 
@@ -28,10 +28,10 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
                 alt={movie.title}
             />
             <div className="description-container">
-            <h2>{`${movie.title.slice(0, 70)}`}</h2>
-            {movie.release_date && <p>Release Date: {movie.release_date.slice(0, 4)}</p>}
-            <StarRating value={movie.vote_average} />
-        </div>
+                <h2>{`${movie.title.slice(0, 70)}`}</h2>
+                {movie.release_date && <p>Release Date: {movie.release_date.slice(0, 4)}</p>}
+                <StarRating value={movie.vote_average}/>
+            </div>
         </div>
     );
 };

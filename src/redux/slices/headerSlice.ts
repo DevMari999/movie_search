@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 interface HeaderState {
     isVisible: boolean;
@@ -18,5 +18,5 @@ const headerSlice = createSlice({
     },
 });
 
-export const { setHeaderVisibility } = headerSlice.actions;
+export const {setHeaderVisibility} = headerSlice.actions;
 export default headerSlice.reducer;

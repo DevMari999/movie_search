@@ -1,6 +1,6 @@
 .general-button {
     display: inline-block;
-    padding: 3px 6px;
+    padding: 4px 9px;
     margin: 10px;
     color: white;
     font-weight: bold;
@@ -11,7 +11,7 @@
     overflow: hidden;
     height: 35px;
     font-size: 15px;
-    border: solid white 1px;
+    border: solid white 0.05em;
 
 }
 
@@ -47,7 +47,7 @@
     opacity: 1;
 }
 
-.light-theme .general-button{
+.light-theme .general-button {
     background-color: rgb(202, 193, 193);
     color: #333333;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -77,10 +77,12 @@
         width: calc(80% - 10px);
     }
 }
+
 @media (min-width: 480px) and (max-width: 768px) {
     .movie-card {
         width: 100%;
     }
+
     .movie-card {
         width: calc(32% - 5px);
     }
@@ -94,12 +96,12 @@
 
 @media (min-width: 1025px) and (max-width: 1440px) {
     .movie-card {
-        width: calc(15% - 5px);
+        width: calc(18% - 5px);
         min-height: 450px;
     }
 }
 
-@media (min-width: 1441px )  {
+@media (min-width: 1441px ) {
     .movie-card {
         width: calc(15% - 5px);
     }

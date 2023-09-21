@@ -1,20 +1,20 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../redux';
-import { setMovies, setCurrentPage } from '../../redux/slices';
-import { api } from '../../services';
-import { MovieCard, Genres } from '../../components';
+import React, {useEffect} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {RootState} from '../../redux';
+import {setMovies, setCurrentPage} from '../../redux/slices';
+import {api} from '../../services';
+import {MovieCard, Genres} from '../../components';
 import './MovieListing.css';
 
 const MovieListing: React.FC = () => {
     const dispatch = useDispatch();
-    const { movies, currentPage } = useSelector((state: RootState) => state.movieListing);
+    const {movies, currentPage} = useSelector((state: RootState) => state.movieListing);
     const isLightTheme = useSelector((state: RootState) => state.theme.isLightTheme);
 
     useEffect(() => {
         const fetchMovies = async () => {
             try {
-                const response = await api.get('/movie/now_playing', { params: { page: currentPage } });
+                const response = await api.get('/movie/now_playing', {params: {page: currentPage}});
                 const newMovies = response.data.results;
                 dispatch(setMovies(newMovies));
             } catch (error) {
@@ -27,22 +27,22 @@ const MovieListing: React.FC = () => {
 
     const goToNextPage = () => {
         dispatch(setCurrentPage(currentPage + 1));
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({top: 0, behavior: 'smooth'});
     };
 
     const goToPreviousPage = () => {
         if (currentPage > 1) {
             dispatch(setCurrentPage(currentPage - 1));
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({top: 0, behavior: 'smooth'});
         }
     };
 
     return (
         <div className={`movie-listing ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
-            <Genres />
+            <Genres/>
             <div className="movie-listing-container">
                 {movies.map((movie) => (
-                    <MovieCard key={movie.id} movie={movie} />
+                    <MovieCard key={movie.id} movie={movie}/>
                 ))}
 
                 <div className="pagination">

@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit';
+import {configureStore} from '@reduxjs/toolkit';
 import homeReducer from "../redux/slices/homeSlice"
 import movieListingReducer from "./slices/movieListingSlice";
 import headerReducer from './slices/headerSlice';

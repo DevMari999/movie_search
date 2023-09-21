@@ -1,6 +1,6 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { RootState } from '../../redux';
+import {useSelector} from 'react-redux';
+import {RootState} from '../../redux';
 import './Footer.css';
 import tmdb from '../../assets/tmdb.png';
 

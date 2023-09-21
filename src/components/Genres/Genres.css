@@ -9,16 +9,18 @@
 }
 
 .genre-buttons-container {
-    width:95%;
+    width: 95%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 20px;
 }
+
 .genres.light-theme {
     background-color: rgb(205, 198, 194);
 }
+
 @keyframes shine {
     0% {
         background-position: -200%;
@@ -27,18 +29,21 @@
         background-position: 200%;
     }
 }
+
 @media (max-width: 480px) {
     .background-img {
         padding: 10px 10px 50px;
     }
+
     .genres {
         height: fit-content;
         padding-top: 60px;
     }
-.mobile-button {
-    font-size: 13px;
-    padding: 2px 5px;
-    margin: 5px;
-}
+
+    .mobile-button {
+        font-size: 13px;
+        padding: 2px 5px;
+        margin: 5px;
+    }
 
 }

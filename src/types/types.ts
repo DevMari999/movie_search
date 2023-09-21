@@ -9,12 +9,8 @@ export interface Movie {
     popularity: number;
     vote_average: number;
 }
+
 export interface Genre {
     id: number;
     name: string;
 }
-
-// export interface HomeState {
-//     searchResults: Movie[];
-//
-// }

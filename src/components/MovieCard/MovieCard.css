@@ -1,77 +1,79 @@
 .movie-card {
-  margin: 10px 10px 15px;
-  background-color: #222;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgb(0, 0, 0);
-  color: #fff;
-  padding: 7px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  transform-origin: center bottom;
+    margin: 10px 10px 15px;
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0, 0, 0);
+    color: #fff;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: center bottom;
 }
 
 .description-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
 .movie-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 12px rgba(141, 6, 6, 0.96);
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(141, 6, 6, 0.96);
 }
 
 .description-container h2 {
-  font-size: 18px;
-  margin: 7px;
- height: 55px;
-  text-align: center;
+    font-size: 18px;
+    margin: 7px;
+    height: 35px;
+    text-align: center;
 }
 
 
 .movie-card .movie-poster {
-  max-width: 100%;
-  border-radius: 4px;
-  margin-bottom: 12px;
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 12px;
 }
 
 .movie-card.light-theme {
-  background-color: rgb(205, 198, 194);
-  color: #222;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgb(205, 198, 194);
+    color: #222;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .movie-card.light-theme:hover {
-  box-shadow: 0 8px 12px #1c1b1b;
+    box-shadow: 0 8px 12px #1c1b1b;
 }
 
 .movie-card.light-theme h2 {
-  color: #222;
+    color: #222;
 }
 
 .movie-card.light-theme p {
-  color: #2b2828;
+    color: #2b2828;
 }
 
 .movie-card.light-theme .movie-poster {
-  border: 1px solid #ddd;
+    border: 1px solid #ddd;
 }
 
 @media (min-width: 480px) and (max-width: 768px) {
-  .movie-card {
-    min-height: 300px;
-  }
-  .description-container h2 {
-    height: 70px;
-  }
+    .movie-card {
+        min-height: 300px;
+    }
+
+    .description-container h2 {
+        height: 70px;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  .movie-card {
-    min-height:350px;
-  }
+    .movie-card {
+        min-height: 350px;
+    }
 }
 
