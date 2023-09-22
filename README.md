@@ -1,5 +1,5 @@
 
-![Screenshot 2023-08-01 at 04 42 39](https://github.com/DevMari999/movie_search/assets/135366781/d374cff3-e384-4a1c-98c7-7de71237097b)
+![movies-screenshot-1](https://github.com/DevMari999/movie_search/assets/135366781/90090f9a-9d58-40da-a428-e9a334dcf312)
 
 
 <b>Movie Website</b>
